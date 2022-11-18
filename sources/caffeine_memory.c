@@ -134,9 +134,10 @@ size_t cff_mem_size(void* ptr) {
 #ifdef ISUNIX
 
 	return malloc_usable_size(ptr);
-#endif // ISUNIX
-
+#else // ISUNIX
 #error Function unavailable for this system.
+#endif	
+	
 	return 0;
 }
 
