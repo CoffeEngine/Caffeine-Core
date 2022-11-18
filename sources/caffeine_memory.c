@@ -28,7 +28,7 @@ int cff_heap_realloc(void* ptr, size_t size, void** out) {
 
 void cff_heap_alloc_free(void* ptr) {
 
-	if (ptr != NULL) _aligned_free(ptr);
+	if (ptr != NULL) free(ptr);
 }
 
 //STACK ALLOCATOR
