@@ -12,27 +12,27 @@
 
 struct AllocatorInterface_s
 {
-	void* (*alloc)(void* context, size_t size, size_t alignment);
-	void* (*realloc)(void* context, void* ptr, size_t size, size_t alignment);
-	void (*free)(void* context, void* ptr, size_t alignment);
-	size_t (*get_size)(void* context, void* ptr, size_t alignment);
+	void* (*alloc)(void* context, size_t size);
+	void* (*realloc)(void* context, void* ptr, size_t size);
+	void (*free)(void* context, void* ptr);
+	size_t (*get_size)(void* context, void* ptr);
 	void* context;
 };
 
 typedef struct AllocatorInterface_s AllocatorInterface;
 
-void* cff_allocator_alloc(AllocatorInterface* allocator, size_t size, size_t alignment);
-int cff_allocator_realloc(AllocatorInterface* allocator, void* ptr, size_t size, size_t alignment, void** out);
-void cff_allocator_free(AllocatorInterface* allocator, void* ptr, size_t alignment);
-size_t cff_allocator_mem_size(AllocatorInterface* allocator, void* ptr, size_t alignment);
+void* cff_allocator_alloc(AllocatorInterface* allocator, size_t size);
+int cff_allocator_realloc(AllocatorInterface* allocator, void* ptr, size_t size, void** out);
+void cff_allocator_free(AllocatorInterface* allocator, void* ptr );
+size_t cff_allocator_mem_size(AllocatorInterface* allocator, void* ptr);
 
 // default allocator
 AllocatorInterface* cff_get_default_allocator();
 void caffeine_set_default_allocator(AllocatorInterface* allocator);
 
 //heap
-void* cff_heap_alloc(size_t size, size_t alignment);
-int cff_heap_realloc(void* ptr, size_t size, size_t alignment, void** out);
+void* cff_heap_alloc(size_t size);
+int cff_heap_realloc(void* ptr, size_t size, void** out);
 void cff_heap_alloc_free(void* ptr);
 
 //stack
@@ -41,7 +41,7 @@ int cff_stack_realloc(void* ptr, size_t old_size, size_t size, void** out);
 void cff_stack_alloc_free(void* ptr);
 
 //utils
-size_t cff_mem_size(void* ptr, size_t alignment);
+size_t cff_mem_size(void* ptr);
 
 int cff_memcmp(const void* a, const void* b, size_t size);
 void cff_memcpy(const void* const src, void* const dest, size_t src_size, size_t dest_size);

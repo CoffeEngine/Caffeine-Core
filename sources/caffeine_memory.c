@@ -4,19 +4,19 @@
 #ifdef CFF_COMP_MSVC
 
 //HEAP ALLOCATOR
-void* cff_heap_alloc(size_t size, size_t alignment) {
+void* cff_heap_alloc(size_t size) {
 	cff_assert_param_not_zero(size);
 
-	void* ptr = _aligned_malloc(size, alignment);
+	void* ptr = malloc(size);
 	return ptr;
 }
 
-int cff_heap_realloc(void* ptr, size_t size, size_t alignment, void** out) {
+int cff_heap_realloc(void* ptr, size_t size, void** out) {
 	cff_assert_param_not_null(ptr);
 	cff_assert_param_not_null(out);
 	cff_assert_param_not_zero(size);
 
-	void* tmp = _aligned_realloc(ptr, size, alignment);
+	void* tmp = realloc(ptr, size);
 
 	if (tmp != NULL) {
 		*out = tmp;
@@ -60,10 +60,10 @@ void cff_stack_alloc_free(void* ptr) {
 }
 
 
-size_t cff_mem_size(void* ptr, size_t alignment) {
+size_t cff_mem_size(void* ptr) {
 	cff_assert_param_not_null(ptr);
 
-	return _aligned_msize(ptr, alignment, 0);
+	return _msize(ptr);
 }
 
 #endif // CFF_COMP == MSVC
@@ -73,14 +73,14 @@ size_t cff_mem_size(void* ptr, size_t alignment) {
 #include <alloca.h>
 
 //HEAP ALLOCATOR
-void* cff_heap_alloc(size_t size, size_t alignment) {
+void* cff_heap_alloc(size_t size) {
 	cff_assert_param_not_zero(size);
 
 	void* ptr = malloc(size);
 	return ptr;
 }
 
-int cff_heap_realloc(void* ptr, size_t size, size_t alignment, void** out) {
+int cff_heap_realloc(void* ptr, size_t size, void** out) {
 	cff_assert_param_not_null(ptr);
 	cff_assert_param_not_null(out);
 	cff_assert_param_not_zero(size);
@@ -128,9 +128,15 @@ void cff_stack_alloc_free(void* ptr) {
 }
 
 
-size_t cff_mem_size(void* ptr, size_t alignment) {
+size_t cff_mem_size(void* ptr) {
 	cff_assert_param_not_null(ptr);
 
+#ifdef ISUNIX
+
+	return malloc_usable_size(ptr);
+#endif // ISUNIX
+
+#error Function unavailable for this system.
 	return 0;
 }
 
@@ -350,20 +356,20 @@ void cff_memset_64(void* const dest, long long int value, size_t size) {
 }
 
 
-void* cff_allocator_alloc(AllocatorInterface* allocator, size_t size, size_t alignment) {
+void* cff_allocator_alloc(AllocatorInterface* allocator, size_t size) {
 	cff_assert_param_not_null(allocator);
 	cff_assert_param_not_zero(size);
 
-	return	allocator->alloc(allocator->context, size, alignment);
+	return	allocator->alloc(allocator->context, size);
 }
 
-int cff_allocator_realloc(AllocatorInterface* allocator, void* ptr, size_t size, size_t alignment, void** out) {
+int cff_allocator_realloc(AllocatorInterface* allocator, void* ptr, size_t size, void** out) {
 	cff_assert_param_not_null(allocator);
 	cff_assert_param_not_null(ptr);
 	cff_assert_param_not_null(out);
 	cff_assert_param_not_zero(size);
 
-	void* tmp = allocator->realloc(allocator->context, ptr, size, alignment);
+	void* tmp = allocator->realloc(allocator->context, ptr, size);
 	if (tmp != NULL) {
 		*out = tmp;
 		return 1;
@@ -371,16 +377,16 @@ int cff_allocator_realloc(AllocatorInterface* allocator, void* ptr, size_t size,
 	return 0;
 }
 
-void cff_allocator_free(AllocatorInterface* allocator, void* ptr, size_t alignment) {
+void cff_allocator_free(AllocatorInterface* allocator, void* ptr) {
 	cff_assert_param_not_null(allocator);
 	cff_assert_param_not_null(ptr);
 	if (ptr != NULL) {
-		allocator->free(allocator->context, ptr, alignment);
+		allocator->free(allocator->context, ptr);
 		allocator->context = 0;
 	}
 }
 
-size_t cff_allocator_mem_size(AllocatorInterface* allocator, void* ptr, size_t alignment) {
+size_t cff_allocator_mem_size(AllocatorInterface* allocator, void* ptr) {
 	cff_assert_param_not_null(allocator);
-	return allocator->get_size(allocator->context, ptr, alignment);
+	return allocator->get_size(allocator->context, ptr);
 }

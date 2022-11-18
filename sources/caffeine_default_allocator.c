@@ -3,22 +3,22 @@
 static AllocatorInterface* _i_caffeine_default_allocator = NULL;
 
 
-void* defaul_alloc(void* context, size_t size, size_t alignment) {
-	return cff_heap_alloc(size,alignment);
+void* defaul_alloc(void* context, size_t size) {
+	return cff_heap_alloc(size);
 }
 
-void* default_realloc(void* context, void* ptr, size_t size, size_t alignment) {
+void* default_realloc(void* context, void* ptr, size_t size) {
 	void* out = NULL;
-	cff_heap_realloc(ptr, size,alignment,&out);
+	cff_heap_realloc(ptr, size,&out);
 	return out;
 }
 
-void default_free(void* context, void* ptr, size_t alignment) {
+void default_free(void* context, void* ptr) {
 	cff_heap_alloc_free(ptr);
 }
 
-size_t default_size(void* context, void* ptr, size_t alignment) {
-	return cff_mem_size(ptr,alignment);
+size_t default_size(void* context, void* ptr) {
+	return cff_mem_size(ptr);
 }
 
 
