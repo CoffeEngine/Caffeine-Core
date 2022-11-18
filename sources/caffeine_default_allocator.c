@@ -4,47 +4,21 @@ static AllocatorInterface* _i_caffeine_default_allocator = NULL;
 
 
 void* defaul_alloc(void* context, size_t size, size_t alignment) {
-	return malloc(size);
+	return cff_heap_alloc(size,alignment);
 }
 
 void* default_realloc(void* context, void* ptr, size_t size, size_t alignment) {
-	return realloc(ptr, size);
+	void* out = NULL;
+	cff_heap_realloc(ptr, size,alignment,&out);
+	return out;
 }
 
 void default_free(void* context, void* ptr, size_t alignment) {
-	free(ptr);
+	cff_heap_alloc_free(ptr);
 }
 
 size_t default_size(void* context, void* ptr, size_t alignment) {
-#if CFF_COMP == MSVC
-	return _msize(ptr);
-#endif
-	return 0;
-}
-
-void* defaul_alloc_a(void* context, size_t size, size_t alignment) {
-#if CFF_COMP == MSVC
-	return _aligned_malloc(size, alignment);
-#endif
-}
-
-void* default_realloc_a(void* context, void* ptr, size_t size, size_t alignment) {
-#if CFF_COMP == MSVC
-	return _aligned_realloc(ptr, size, alignment);
-#endif
-}
-
-void default_free_a(void* context, void* ptr, size_t alignment) {
-#if CFF_COMP == MSVC
-	_aligned_free(ptr);
-#endif
-}
-
-size_t default_size_a(void* context, void* ptr, size_t alignment) {
-#if CFF_COMP == MSVC
-	return _aligned_msize(ptr, alignment, 0);
-#endif
-	return 0;
+	return cff_mem_size(ptr,alignment);
 }
 
 

@@ -2,7 +2,7 @@
 workspace "Caffeine" 
     configurations { "Debug","Release" } 
    
-    project "Core"   
+    project "Caffeine-Core"   
         kind "StaticLib"  
         language "C"   
         

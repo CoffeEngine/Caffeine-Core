@@ -131,7 +131,7 @@ void cff_stack_alloc_free(void* ptr) {
 size_t cff_mem_size(void* ptr, size_t alignment) {
 	cff_assert_param_not_null(ptr);
 
-	return _aligned_msize(ptr, alignment, 0);
+	return 0;
 }
 
 
@@ -151,7 +151,13 @@ void cff_memcpy(const void* const src, void* const dest, size_t src_size, size_t
 	cff_assert_param_not_zero(src_size);
 	cff_assert_param_not_zero(dest_size);
 
+	#ifdef CFF_COMP_MSVC
 	memcpy_s(dest, dest_size, src, src_size);
+	#endif
+
+	#ifdef CFF_COMP_GCC
+	memcpy(dest,src,src_size);
+	#endif
 }
 
 void cff_memmove(const void* const src, void* const dest, size_t src_size, size_t dest_size) {
@@ -160,7 +166,13 @@ void cff_memmove(const void* const src, void* const dest, size_t src_size, size_
 	cff_assert_param_not_zero(src_size);
 	cff_assert_param_not_zero(dest_size);
 
+	#ifdef CFF_COMP_MSVC
 	memmove_s(dest, dest_size, src, src_size);
+	#endif
+
+	#ifdef CFF_COMP_GCC
+	memmove(dest,src,src_size);
+	#endif
 }
 
 void cff_memset(void* dest, int value, size_t size) {
