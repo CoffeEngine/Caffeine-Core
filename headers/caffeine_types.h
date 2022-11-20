@@ -1,13 +1,16 @@
-/*! \file caffeine_types.h
-	\brief Defines common types used by the caffeine libraries.
+/** @defgroup Types
+ 	@file caffeine_types.h
+	@brief Defines common types used by the caffeine libraries.
 
 */
 
 #ifndef CAFFEINE_TYPES_H
 #define CAFFEINE_TYPES_H
 
-/*! \enum cff_comparer_value_e
-*	\brief An Enum that represents a comparation betwen two values.
+/** 
+ * @ingroup Types
+ * @enum cff_comparer_value_e
+*  @brief An Enum that represents a comparation betwen two values.
 *
 */
 enum cff_comparer_value_e {
@@ -17,8 +20,10 @@ enum cff_comparer_value_e {
 	CFF_GREATER = 1, ///<  The value is greater than its comparison
 };
 
-/*! \enum cff_error_value_e
-*	\brief An Enum that represents a caffeine error.
+/** 
+ * @ingroup Types
+ * @enum cff_error_value_e
+*	@brief An Enum that represents a caffeine error.
 *   
 */
 enum cff_error_value_e {
@@ -27,61 +32,69 @@ enum cff_error_value_e {
 	CFF_REALLOC_ERR, ///< A request for memory reallocation returned NULL
 };
 
-/*! \typedef typedef enum cff_comparer_value_e cff_cmp_e
-*	\brief A syntax sugar for enum cff_comparer_value_e.
+/** 
+ * @ingroup Types
+ * @typedef typedef enum cff_comparer_value_e cff_cmp_e
+*	@brief A syntax sugar for enum cff_comparer_value_e.
 *
 */
 typedef enum cff_comparer_value_e cff_cmp_e;
 
-/*! \typedef typedef enum cff_error_value_e cff_err_e
-*	\brief A syntax sugar for enum cff_error_value_e.
+/** 
+ * @ingroup Types
+ * @typedef typedef enum cff_error_value_e cff_err_e
+*	@brief A syntax sugar for enum cff_error_value_e.
 *
 */
 typedef enum cff_error_value_e cff_err_e;
 
-/*! \typedef typedef cff_cmp_e(*comparer_fn)(const void* const a_ptr, const void* const b_ptr, uint64_t data_size)
-*	\brief A callback type for value comparison.
+/**
+*   @ingroup Types
+*	@brief A callback type for value comparison.
 *	
 *	This callback is usefull to standardize a generic value comparison routine.
 * 
-*   \param [in] a_ptr pointer for a value
-*   \param [in] b_ptr pointer for a value
-*   \param [in] data_size the size of the two values
-*	\return an cff_cmp_e that represents the comparison betwen the values
+*   @param [in] a_ptr pointer for a value
+*   @param [in] b_ptr pointer for a value
+*   @param [in] data_size the size of the two values
+*	@return an cff_cmp_e that represents the comparison betwen the values
 */
 typedef cff_cmp_e(*comparer_fn)(const void* const a_ptr, const void* const b_ptr, uint64_t data_size);
 
-/*! \typedef typedef bool (*filter_fn)(const void* const data_ptr, uint64_t index, uint64_t data_size)
-*	\brief A callback type for collection filtering.
+/** 
+*   @ingroup Types
+*	@brief A callback type for collection filtering.
 *
 *	This callback is usefull to standardize a generic collection filtering routine.
 * 
-*   \param [in] data_ptr pointer for a value that will be analyzed
-*   \param [in] index the index of the value inside the collection
-*   \param [in] data_size the size of the value
-*   \return a boolean that indicates if the current value passed in the filter
+*   @param [in] data_ptr pointer for a value that will be analyzed
+*   @param [in] index the index of the value inside the collection
+*   @param [in] data_size the size of the value
+*   @return a boolean that indicates if the current value passed in the filter
 */
 typedef bool (*filter_fn)(const void* const data_ptr, uint64_t index, uint64_t data_size);
 
-/*! \typedef typedef void(*map_fn)(const void* const from_ptr, void* to_ptr, uint64_t index)
-*	\brief A callback type for collection transformation.
+/** 
+*   @ingroup Types
+*	@brief A callback type for collection transformation.
 *
 *	This callback is usefull to standardize a generic collection transformation routine.
 * 
-*   \param [in] from_ptr pointer for an initial value before transformation
-*   \param [out] to_ptr pointer for a memory block that will receive the transformation result
-*   \param [in] index the index of the value inside the collection
+*   @param [in] from_ptr pointer for an initial value before transformation
+*   @param [out] to_ptr pointer for a memory block that will receive the transformation result
+*   @param [in] index the index of the value inside the collection
 */
 typedef void(*map_fn)(const void* const from_ptr, void* to_ptr, uint64_t index);
 
-/*! \typedef typedef void(*foreach_fn)(void* data_ptr, uint64_t index)
-*	\brief A callback type for collection transformation.
+/**
+*   @ingroup Types
+*	@brief A callback type for collection transformation.
 *
 *	This callback is usefull to standardize a generic routine that will be run
 *	to every collection element.
 *
-*   \param [in,out] data_ptr pointer for a value that will be used
-*   \param [in] index the index of the value inside an collection
+*   @param [in,out] data_ptr pointer for a value that will be used
+*   @param [in] index the index of the value inside an collection
 */
 typedef void(*foreach_fn)(void* data_ptr, uint64_t index);
 
