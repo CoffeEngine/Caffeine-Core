@@ -39,7 +39,7 @@ AllocatorInterface* cff_get_default_allocator() {
 	return _i_caffeine_default_allocator;
 }
 
-void caffeine_set_default_allocator(AllocatorInterface* allocator) {
+void cff_set_default_allocator(AllocatorInterface* allocator) {
 	_i_caffeine_default_allocator = allocator;
 }
 
