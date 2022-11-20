@@ -7,8 +7,8 @@ var caffeine__memory_8h =
     [ "cff_allocator_realloc", "group__Memory.html#ga2c0579d7e1221998f9aa469414b02135", null ],
     [ "cff_get_default_allocator", "group__Memory.html#ga7e877bdff45190aae9631afc417aa770", null ],
     [ "cff_heap_alloc", "group__Memory.html#ga5c01abf99f1adb5c8d9c0aab4993ae40", null ],
-    [ "cff_heap_alloc_free", "caffeine__memory_8h.html#a6b117b042990752ddc6b92a6de2e946b", null ],
-    [ "cff_heap_realloc", "caffeine__memory_8h.html#a49aada1415e48822c27fbe4301466386", null ],
+    [ "cff_heap_alloc_free", "group__Memory.html#ga6b117b042990752ddc6b92a6de2e946b", null ],
+    [ "cff_heap_realloc", "group__Memory.html#ga49aada1415e48822c27fbe4301466386", null ],
     [ "cff_mem_size", "group__Memory.html#ga6b9ab770651d550cd2548265ece17cf2", null ],
     [ "cff_memcmp", "group__Memory.html#ga9e9d9280f86864f85ec68406a5e9b9e8", null ],
     [ "cff_memcmp_16", "group__Memory.html#ga2961128d7e32b4be2947c8e5c699ba6b", null ],
@@ -28,6 +28,6 @@ var caffeine__memory_8h =
     [ "cff_memset_8", "caffeine__memory_8h.html#a2435b5ed5edcc3625a0ec8305c21b759", null ],
     [ "cff_set_default_allocator", "group__Memory.html#gae6df5a128cc2f599951fadf5c488d92a", null ],
     [ "cff_stack_alloc", "group__Memory.html#gab0108b146a32a216acc45e67da082452", null ],
-    [ "cff_stack_alloc_free", "caffeine__memory_8h.html#a3a061df742a844aa0bbb3487f4962705", null ],
-    [ "cff_stack_realloc", "caffeine__memory_8h.html#af49b63a4451c349ef8f63b8a86410990", null ]
+    [ "cff_stack_alloc_free", "group__Memory.html#ga3a061df742a844aa0bbb3487f4962705", null ],
+    [ "cff_stack_realloc", "group__Memory.html#gaf49b63a4451c349ef8f63b8a86410990", null ]
 ];

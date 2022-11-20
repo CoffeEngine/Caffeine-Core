@@ -132,9 +132,21 @@ Functions</h2></td></tr>
 <tr class="memitem:ga5c01abf99f1adb5c8d9c0aab4993ae40"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga5c01abf99f1adb5c8d9c0aab4993ae40">cff_heap_alloc</a> (size_t size)</td></tr>
 <tr class="memdesc:ga5c01abf99f1adb5c8d9c0aab4993ae40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a memory block using the libc malloc function.  <a href="group__Memory.html#ga5c01abf99f1adb5c8d9c0aab4993ae40">More...</a><br /></td></tr>
 <tr class="separator:ga5c01abf99f1adb5c8d9c0aab4993ae40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga49aada1415e48822c27fbe4301466386"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga49aada1415e48822c27fbe4301466386">cff_heap_realloc</a> (void *ptr, size_t size, void **out)</td></tr>
+<tr class="memdesc:ga49aada1415e48822c27fbe4301466386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocates a memory block using the libc realloc function.  <a href="group__Memory.html#ga49aada1415e48822c27fbe4301466386">More...</a><br /></td></tr>
+<tr class="separator:ga49aada1415e48822c27fbe4301466386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6b117b042990752ddc6b92a6de2e946b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga6b117b042990752ddc6b92a6de2e946b">cff_heap_alloc_free</a> (void *ptr)</td></tr>
+<tr class="memdesc:ga6b117b042990752ddc6b92a6de2e946b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases a memory block using the libc free function.  <a href="group__Memory.html#ga6b117b042990752ddc6b92a6de2e946b">More...</a><br /></td></tr>
+<tr class="separator:ga6b117b042990752ddc6b92a6de2e946b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab0108b146a32a216acc45e67da082452"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#gab0108b146a32a216acc45e67da082452">cff_stack_alloc</a> (size_t size)</td></tr>
 <tr class="memdesc:gab0108b146a32a216acc45e67da082452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocates a memory block on stack.  <a href="group__Memory.html#gab0108b146a32a216acc45e67da082452">More...</a><br /></td></tr>
 <tr class="separator:gab0108b146a32a216acc45e67da082452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf49b63a4451c349ef8f63b8a86410990"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#gaf49b63a4451c349ef8f63b8a86410990">cff_stack_realloc</a> (void *ptr, size_t old_size, size_t size, void **out)</td></tr>
+<tr class="memdesc:gaf49b63a4451c349ef8f63b8a86410990"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reallocates a memory block on stack.  <a href="group__Memory.html#gaf49b63a4451c349ef8f63b8a86410990">More...</a><br /></td></tr>
+<tr class="separator:gaf49b63a4451c349ef8f63b8a86410990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3a061df742a844aa0bbb3487f4962705"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga3a061df742a844aa0bbb3487f4962705">cff_stack_alloc_free</a> (void *ptr)</td></tr>
+<tr class="memdesc:ga3a061df742a844aa0bbb3487f4962705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Releases a memory block on stack.  <a href="group__Memory.html#ga3a061df742a844aa0bbb3487f4962705">More...</a><br /></td></tr>
+<tr class="separator:ga3a061df742a844aa0bbb3487f4962705"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6b9ab770651d550cd2548265ece17cf2"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga6b9ab770651d550cd2548265ece17cf2">cff_mem_size</a> (void *ptr)</td></tr>
 <tr class="memdesc:ga6b9ab770651d550cd2548265ece17cf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function that gets the size of an allocated block.  <a href="group__Memory.html#ga6b9ab770651d550cd2548265ece17cf2">More...</a><br /></td></tr>
 <tr class="separator:ga6b9ab770651d550cd2548265ece17cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -363,10 +375,6 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Allocates a memory block using the libc malloc function. </p>
-<p>Releases a memory block on stack.</p>
-<p>Reallocates a memory block on stack.</p>
-<p>Releases a memory block using the libc free function.</p>
-<p>Reallocates a memory block using the libc realloc function.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>the size of block to be allocated in bytes. </td></tr>
@@ -374,7 +382,70 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the allocated memory block or null in failure cases.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>The function called depends on the compiler used and target operating system.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The function called depends on the compiler used and target operating system. </dd></dl>
+
+</div>
+</div>
+<a id="ga6b117b042990752ddc6b92a6de2e946b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6b117b042990752ddc6b92a6de2e946b">&#9670;&nbsp;</a></span>cff_heap_alloc_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cff_heap_alloc_free </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Releases a memory block using the libc free function. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>pointer to the block that will be deallocated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>The function called depends on the compiler used and target operating system. </dd></dl>
+
+</div>
+</div>
+<a id="ga49aada1415e48822c27fbe4301466386"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga49aada1415e48822c27fbe4301466386">&#9670;&nbsp;</a></span>cff_heap_realloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cff_heap_realloc </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reallocates a memory block using the libc realloc function. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>pointer to the block that will be reallocated. </td></tr>
@@ -384,32 +455,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 in failure case or 1 in sucess case.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>The function called depends on the compiler used and target operating system.</dd></dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>pointer to the block that will be deallocated.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section warning"><dt>Warning</dt><dd>The function called depends on the compiler used and target operating system.</dd></dl>
-<p>Internally, this function will allocate a new block on stack, copy the data from old block to the new and try to dealloc the old block, be aware that some runtimes doesn't allow manually stack release, in such cases both memory blocks will be allocated until the end of scope.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>pointer to the block that will be reallocated. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>the new size for the memory block in bytes. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>pointer to the memory block after reallocated or to null in failure case. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>0 in failure case or 1 in sucess case.</dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>The function called depends on the compiler used and target operating system.</dd></dl>
-<p>Be aware that some runtimes doesn't allow manually stack release, in such cases this function does nothing.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>pointer to the block that will be deallocated.</td></tr>
-  </table>
-  </dd>
-</dl>
 <dl class="section warning"><dt>Warning</dt><dd>The function called depends on the compiler used and target operating system. </dd></dl>
 
 </div>
@@ -908,6 +953,87 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>a pointer to the allocated memory block or null in failure cases.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The function called depends on the compiler used and target operating system. </dd></dl>
+
+</div>
+</div>
+<a id="ga3a061df742a844aa0bbb3487f4962705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a061df742a844aa0bbb3487f4962705">&#9670;&nbsp;</a></span>cff_stack_alloc_free()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void cff_stack_alloc_free </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Releases a memory block on stack. </p>
+<p>Be aware that some runtimes doesn't allow manually stack release, in such cases this function does nothing.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>pointer to the block that will be deallocated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>The function called depends on the compiler used and target operating system. </dd></dl>
+
+</div>
+</div>
+<a id="gaf49b63a4451c349ef8f63b8a86410990"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf49b63a4451c349ef8f63b8a86410990">&#9670;&nbsp;</a></span>cff_stack_realloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cff_stack_realloc </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>old_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reallocates a memory block on stack. </p>
+<p>Internally, this function will allocate a new block on stack, copy the data from old block to the new and try to dealloc the old block, be aware that some runtimes doesn't allow manually stack release, in such cases both memory blocks will be allocated until the end of scope.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>pointer to the block that will be reallocated. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>the new size for the memory block in bytes. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">out</td><td>pointer to the memory block after reallocated or to null in failure case. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 in failure case or 1 in sucess case.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>The function called depends on the compiler used and target operating system. </dd></dl>
 
 </div>
