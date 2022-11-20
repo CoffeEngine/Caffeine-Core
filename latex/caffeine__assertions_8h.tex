@@ -1,0 +1,57 @@
+\hypertarget{caffeine__assertions_8h}{}\doxysection{caffeine\+\_\+assertions.\+h File Reference}
+\label{caffeine__assertions_8h}\index{caffeine\_assertions.h@{caffeine\_assertions.h}}
+
+
+Defines assertion macros.  
+
+
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}caffeine\+\_\+macros.\+h\char`\"{}}\newline
+Include dependency graph for caffeine\+\_\+assertions.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{caffeine__assertions_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}(E\+XP,  M\+SG)~for (unsigned char \+\_\+\+\_\+assertion\+\_\+flag\+\_\+\+\_\+ = (E\+XP); !(\+\_\+\+\_\+assertion\+\_\+flag\+\_\+\+\_\+) ; assert(\+\_\+\+\_\+assertion\+\_\+flag\+\_\+\+\_\+) ) \{ printf(\char`\"{}\mbox{[}\%s\+::\%s\mbox{]}@n \%s@n@n\char`\"{},C\+F\+F\+\_\+\+F\+I\+L\+E\+N\+A\+ME,\+\_\+\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+\_\+,M\+SG); \}
+\begin{DoxyCompactList}\small\item\em Asserts the expression {\itshape E\+XP} and case it evaluates to false prints the message {\itshape M\+SG} on S\+T\+D\+O\+UT. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_gaed0c3edb84a6177123f07e936f71108f}{cff\+\_\+assert\+\_\+param\+\_\+not\+\_\+null}}(P\+A\+R\+AM)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((void$\ast$)(P\+A\+R\+AM) != N\+U\+LL, \char`\"{}Invalid Parameter Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} couldn\textquotesingle{}t be null\char`\"{} )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is not N\+U\+LL. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_ga2abe2a139ec4abf9a2f690bd9f2a1608}{cff\+\_\+assert\+\_\+param\+\_\+not\+\_\+zero}}(P\+A\+R\+AM)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((P\+A\+R\+AM) != 0, \char`\"{}Invalid Parameter Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} couldn\textquotesingle{}t be 0\char`\"{} )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is not 0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_gab051e89d370b53bcedc22778b138f2e4}{cff\+\_\+assert\+\_\+param\+\_\+equals}}(P\+A\+R\+AM,  V\+A\+L\+UE)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((P\+A\+R\+AM) == (V\+A\+L\+UE), \char`\"{}Invalid Parameter Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} shout be equals to \char`\"{} \#V\+A\+L\+UE )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is equals to {\itshape V\+A\+L\+UE}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_gac3b56bab5d51bb4039c284bcc5c71467}{cff\+\_\+assert\+\_\+param\+\_\+greater}}(P\+A\+R\+AM,  V\+A\+L\+UE)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((P\+A\+R\+AM) $>$ (V\+A\+L\+UE), \char`\"{}Invalid Parameter Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} shout be greater than \char`\"{} \#V\+A\+L\+UE )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is greater than {\itshape V\+A\+L\+UE}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_gaa1446e3b14a3d3a77bd1b57ebbac7344}{cff\+\_\+assert\+\_\+param\+\_\+greater\+\_\+eq}}(P\+A\+R\+AM,  V\+A\+L\+UE)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((P\+A\+R\+AM) $>$= (V\+A\+L\+UE), \char`\"{}Invalid Parameter Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} shout be equal or greater than \char`\"{} \#V\+A\+L\+UE )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is greater or equals to {\itshape V\+A\+L\+UE}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_ga5eb134653288f232b24447d7a3e57e8e}{cff\+\_\+assert\+\_\+param\+\_\+less}}(P\+A\+R\+AM,  V\+A\+L\+UE)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((P\+A\+R\+AM) $<$ (V\+A\+L\+UE), \char`\"{}Invalid Parameter Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} shout be less than \char`\"{} \#V\+A\+L\+UE )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is less than {\itshape V\+A\+L\+UE}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_ga764995c1b8ab355a2bf413a98501dbdf}{cff\+\_\+assert\+\_\+param\+\_\+less\+\_\+eq}}(P\+A\+R\+AM,  V\+A\+L\+UE)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((P\+A\+R\+AM) $<$= (V\+A\+L\+UE), \char`\"{}Invalid Parameter Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} shout be equal or less than \char`\"{} \#V\+A\+L\+UE )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is less or equals to {\itshape V\+A\+L\+UE}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_ga7c28b38f6d018857bdd98f007df31532}{cff\+\_\+assert\+\_\+not\+\_\+null}}(P\+A\+R\+AM)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((void$\ast$)(P\+A\+R\+AM) != N\+U\+LL, \char`\"{}Invalid Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} couldn\textquotesingle{}t be null\char`\"{} )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is not N\+U\+LL. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_gaa36eca8c7302fa87d493fd81344b6946}{cff\+\_\+assert\+\_\+not\+\_\+zero}}(P\+A\+R\+AM)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((P\+A\+R\+AM) != 0, \char`\"{}Invalid Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} couldn\textquotesingle{}t be 0\char`\"{} )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is not 0. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_ga9b4f87b50013ca874d95035549b3cdce}{cff\+\_\+assert\+\_\+equals}}(P\+A\+R\+AM,  V\+A\+L\+UE)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((P\+A\+R\+AM) == (V\+A\+L\+UE), \char`\"{}Invalid Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} shout be equals to \char`\"{} \#V\+A\+L\+UE )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is equals to {\itshape V\+A\+L\+UE}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_ga227dc4938272f865ed0be199fff23cc1}{cff\+\_\+assert\+\_\+greater}}(P\+A\+R\+AM,  V\+A\+L\+UE)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((P\+A\+R\+AM) $>$ (V\+A\+L\+UE), \char`\"{}Invalid Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} shout be greater than \char`\"{} \#V\+A\+L\+UE )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is greater than {\itshape V\+A\+L\+UE}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_gaadc5125b472c2a56252e919d423b7d96}{cff\+\_\+assert\+\_\+greater\+\_\+eq}}(P\+A\+R\+AM,  V\+A\+L\+UE)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((P\+A\+R\+AM) $>$= (V\+A\+L\+UE), \char`\"{}Invalid Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} shout be equal or greater than \char`\"{} \#V\+A\+L\+UE )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is greater or equals to {\itshape V\+A\+L\+UE}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_ga799f63a0f04570bd112144a1d2b3bc5d}{cff\+\_\+assert\+\_\+less}}(P\+A\+R\+AM,  V\+A\+L\+UE)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((P\+A\+R\+AM) $<$ (V\+A\+L\+UE), \char`\"{}Invalid Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} shout be less than \char`\"{} \#V\+A\+L\+UE )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is less than {\itshape V\+A\+L\+UE}. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group__Assertions_gaa40ee9b4e8415289fa1cafd6c4aa8a61}{cff\+\_\+assert\+\_\+less\+\_\+eq}}(P\+A\+R\+AM,  V\+A\+L\+UE)~\mbox{\hyperlink{group__Assertions_ga43c252bc2eadcfff7394a7ba6bb5e8be}{cff\+\_\+assert\+\_\+msg}}((P\+A\+R\+AM) $<$= (V\+A\+L\+UE), \char`\"{}Invalid Value\+: \char`\"{} \#P\+A\+R\+AM \char`\"{} shout be equal or less than \char`\"{} \#V\+A\+L\+UE )
+\begin{DoxyCompactList}\small\item\em Asserts the value of {\itshape P\+A\+R\+AM} is less or equals to {\itshape V\+A\+L\+UE}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines assertion macros. 
+
+This file defines macros for both parameter and general purpose validation with a friendly message. The assertions will be defined only on debug mode 

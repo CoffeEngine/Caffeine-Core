@@ -1,0 +1,124 @@
+\hypertarget{structAllocatorInterface__s}{}\doxysection{Allocator\+Interface\+\_\+s Struct Reference}
+\label{structAllocatorInterface__s}\index{AllocatorInterface\_s@{AllocatorInterface\_s}}
+
+
+Defines an interface to standardize custom allocators implementation.  
+
+
+
+
+{\ttfamily \#include $<$caffeine\+\_\+memory.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$($\ast$ \mbox{\hyperlink{structAllocatorInterface__s_a1855c1a93794bd338c42454e08a82563}{alloc}} )(void $\ast$\mbox{\hyperlink{structAllocatorInterface__s_aea6f275096ca4e511c1fbe3babd54047}{context}}, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em A function pointer to a memory allocation function. \end{DoxyCompactList}\item 
+void $\ast$($\ast$ \mbox{\hyperlink{structAllocatorInterface__s_a6a84cf495d2e52a254626826f2fce92d}{realloc}} )(void $\ast$\mbox{\hyperlink{structAllocatorInterface__s_aea6f275096ca4e511c1fbe3babd54047}{context}}, void $\ast$ptr, size\+\_\+t size)
+\begin{DoxyCompactList}\small\item\em A function pointer to a memory reallocation function. \end{DoxyCompactList}\item 
+void($\ast$ \mbox{\hyperlink{structAllocatorInterface__s_a40c6069c89970183f04e7928ff944447}{free}} )(void $\ast$\mbox{\hyperlink{structAllocatorInterface__s_aea6f275096ca4e511c1fbe3babd54047}{context}}, void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em A function pointer to a memory deallocation function. \end{DoxyCompactList}\item 
+size\+\_\+t($\ast$ \mbox{\hyperlink{structAllocatorInterface__s_a6f4b448c1e09551737aa5afa0382d8a3}{get\+\_\+size}} )(void $\ast$\mbox{\hyperlink{structAllocatorInterface__s_aea6f275096ca4e511c1fbe3babd54047}{context}}, void $\ast$ptr)
+\begin{DoxyCompactList}\small\item\em A function pointer to function that gets the size of an allocated block. \end{DoxyCompactList}\item 
+void $\ast$ \mbox{\hyperlink{structAllocatorInterface__s_aea6f275096ca4e511c1fbe3babd54047}{context}}
+\begin{DoxyCompactList}\small\item\em A pointer to any auxiliaty data needed by the allocator. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines an interface to standardize custom allocators implementation. 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structAllocatorInterface__s_a1855c1a93794bd338c42454e08a82563}\label{structAllocatorInterface__s_a1855c1a93794bd338c42454e08a82563}} 
+\index{AllocatorInterface\_s@{AllocatorInterface\_s}!alloc@{alloc}}
+\index{alloc@{alloc}!AllocatorInterface\_s@{AllocatorInterface\_s}}
+\doxysubsubsection{\texorpdfstring{alloc}{alloc}}
+{\footnotesize\ttfamily void$\ast$($\ast$ Allocator\+Interface\+\_\+s\+::alloc) (void $\ast$\mbox{\hyperlink{structAllocatorInterface__s_aea6f275096ca4e511c1fbe3babd54047}{context}}, size\+\_\+t size)}
+
+
+
+A function pointer to a memory allocation function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em context} & pointer for the context data needed by the allocator. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & the size of memory block to be allocated in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the allocated memory block or null in failure cases. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structAllocatorInterface__s_aea6f275096ca4e511c1fbe3babd54047}\label{structAllocatorInterface__s_aea6f275096ca4e511c1fbe3babd54047}} 
+\index{AllocatorInterface\_s@{AllocatorInterface\_s}!context@{context}}
+\index{context@{context}!AllocatorInterface\_s@{AllocatorInterface\_s}}
+\doxysubsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily void$\ast$ Allocator\+Interface\+\_\+s\+::context}
+
+
+
+A pointer to any auxiliaty data needed by the allocator. 
+
+The purporse of this pointer is to keep track of a possible information that the allocator maybe need to know (eg. a linked list with allocated blocks). This pointer will be passed to every function defined by this interface. \mbox{\Hypertarget{structAllocatorInterface__s_a40c6069c89970183f04e7928ff944447}\label{structAllocatorInterface__s_a40c6069c89970183f04e7928ff944447}} 
+\index{AllocatorInterface\_s@{AllocatorInterface\_s}!free@{free}}
+\index{free@{free}!AllocatorInterface\_s@{AllocatorInterface\_s}}
+\doxysubsubsection{\texorpdfstring{free}{free}}
+{\footnotesize\ttfamily void($\ast$ Allocator\+Interface\+\_\+s\+::free) (void $\ast$\mbox{\hyperlink{structAllocatorInterface__s_aea6f275096ca4e511c1fbe3babd54047}{context}}, void $\ast$ptr)}
+
+
+
+A function pointer to a memory deallocation function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em context} & pointer for the context data needed by the allocator. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ptr} & pointer to the memory block previusly allocated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{structAllocatorInterface__s_a6f4b448c1e09551737aa5afa0382d8a3}\label{structAllocatorInterface__s_a6f4b448c1e09551737aa5afa0382d8a3}} 
+\index{AllocatorInterface\_s@{AllocatorInterface\_s}!get\_size@{get\_size}}
+\index{get\_size@{get\_size}!AllocatorInterface\_s@{AllocatorInterface\_s}}
+\doxysubsubsection{\texorpdfstring{get\_size}{get\_size}}
+{\footnotesize\ttfamily size\+\_\+t($\ast$ Allocator\+Interface\+\_\+s\+::get\+\_\+size) (void $\ast$\mbox{\hyperlink{structAllocatorInterface__s_aea6f275096ca4e511c1fbe3babd54047}{context}}, void $\ast$ptr)}
+
+
+
+A function pointer to function that gets the size of an allocated block. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em context} & pointer for the context data needed by the allocator. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ptr} & pointer to the memory block previusly allocated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the size of the block in bytes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{structAllocatorInterface__s_a6a84cf495d2e52a254626826f2fce92d}\label{structAllocatorInterface__s_a6a84cf495d2e52a254626826f2fce92d}} 
+\index{AllocatorInterface\_s@{AllocatorInterface\_s}!realloc@{realloc}}
+\index{realloc@{realloc}!AllocatorInterface\_s@{AllocatorInterface\_s}}
+\doxysubsubsection{\texorpdfstring{realloc}{realloc}}
+{\footnotesize\ttfamily void$\ast$($\ast$ Allocator\+Interface\+\_\+s\+::realloc) (void $\ast$\mbox{\hyperlink{structAllocatorInterface__s_aea6f275096ca4e511c1fbe3babd54047}{context}}, void $\ast$ptr, size\+\_\+t size)}
+
+
+
+A function pointer to a memory reallocation function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em context} & pointer for the context data needed by the allocator. \\
+\hline
+\mbox{\texttt{ in}}  & {\em ptr} & pointer to the memory block previusly allocated. \\
+\hline
+\mbox{\texttt{ in}}  & {\em size} & the size of memory block to be allocated in bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the reallocated memory block or null in failure cases. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{caffeine__memory_8h}{caffeine\+\_\+memory.\+h}}\end{DoxyCompactItemize}
