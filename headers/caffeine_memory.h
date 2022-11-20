@@ -170,7 +170,7 @@ void* cff_heap_alloc(size_t size);
 
 /** 
  * @ingroup Memory
- * @fn void* cff_heap_alloc(size_t size)
+ * @fn int cff_heap_realloc(void* ptr, size_t size, void** out)
 *	@brief Reallocates a memory block using the libc realloc function.
 *
 *	@param [in] ptr pointer to the block that will be reallocated.
@@ -184,7 +184,7 @@ int cff_heap_realloc(void* ptr, size_t size, void** out);
 
 /** 
  * @ingroup Memory
- * @fn void* cff_heap_alloc(size_t size)
+ * @fn void cff_heap_alloc_free(void* ptr)
 *	@brief Releases a memory block using the libc free function.
 *
 *	@param [in] ptr pointer to the block that will be deallocated.
@@ -207,7 +207,7 @@ void* cff_stack_alloc(size_t size);
 
 /** 
  * @ingroup Memory
- * @fn void* cff_heap_alloc(size_t size)
+ * @fn int cff_stack_realloc(void* ptr, size_t old_size, size_t size, void** out)
 *	@brief Reallocates a memory block on stack.
 *
 *	Internally, this function will allocate a new block on stack, copy the data from old block to the new and try to dealloc the old block,
@@ -224,7 +224,7 @@ int cff_stack_realloc(void* ptr, size_t old_size, size_t size, void** out);
 
 /** 
  * @ingroup Memory
- * @fn void* cff_heap_alloc(size_t size)
+ * @fn void cff_stack_alloc_free(void* ptr)
 *	@brief Releases a memory block on stack.
 *
 *	Be aware that some runtimes doesn't allow manually stack release, in such cases this function does nothing.
