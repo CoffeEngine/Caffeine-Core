@@ -400,7 +400,7 @@ void cff_memcpy_64(const void* const src, void* const dest, size_t size);
 
 /** 
  * @ingroup Memory
- * @fn void ccff_memset_8(void* const dest, char value, size_t size)
+ * @fn void cff_memset_8(void* const dest, char value, size_t size)
 *	@brief Sets all values of an memory block to a value 8 bits at a time.
 *
 *	@param [in] dest pointer to a memory block.
