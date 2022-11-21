@@ -144,9 +144,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga979ab4ea6acac240194b25800bfd3ebb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga979ab4ea6acac240194b25800bfd3ebb">cff_allocator_free</a> (<a class="el" href="group__Memory.html#ga445f854a7fb44af7fd6911674d5aaf03">AllocatorInterface</a> *allocator, void *ptr)</td></tr>
 <tr class="memdesc:ga979ab4ea6acac240194b25800bfd3ebb"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function to deallocate memory using an AllocatorInterface.  <a href="group__Memory.html#ga979ab4ea6acac240194b25800bfd3ebb">More...</a><br /></td></tr>
 <tr class="separator:ga979ab4ea6acac240194b25800bfd3ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61f19c0d35c8fe341e799ad5b98512cd"><td class="memItemLeft" align="right" valign="top"><a id="a61f19c0d35c8fe341e799ad5b98512cd"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>cff_allocator_mem_size</b> (<a class="el" href="group__Memory.html#ga445f854a7fb44af7fd6911674d5aaf03">AllocatorInterface</a> *allocator, void *ptr)</td></tr>
-<tr class="separator:a61f19c0d35c8fe341e799ad5b98512cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61f19c0d35c8fe341e799ad5b98512cd"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga61f19c0d35c8fe341e799ad5b98512cd">cff_allocator_mem_size</a> (<a class="el" href="group__Memory.html#ga445f854a7fb44af7fd6911674d5aaf03">AllocatorInterface</a> *allocator, void *ptr)</td></tr>
+<tr class="memdesc:ga61f19c0d35c8fe341e799ad5b98512cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A function that gets the size of an allocated block.  <a href="group__Memory.html#ga61f19c0d35c8fe341e799ad5b98512cd">More...</a><br /></td></tr>
+<tr class="separator:ga61f19c0d35c8fe341e799ad5b98512cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7e877bdff45190aae9631afc417aa770"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__Memory.html#ga445f854a7fb44af7fd6911674d5aaf03">AllocatorInterface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga7e877bdff45190aae9631afc417aa770">cff_get_default_allocator</a> ()</td></tr>
 <tr class="memdesc:ga7e877bdff45190aae9631afc417aa770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility function that provides a pointer to the default memory allocator in the process.  <a href="group__Memory.html#ga7e877bdff45190aae9631afc417aa770">More...</a><br /></td></tr>
 <tr class="separator:ga7e877bdff45190aae9631afc417aa770"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -198,30 +198,30 @@ size_t&#160;</td><td class="memItemRight" valign="bottom"><b>cff_allocator_mem_s
 <tr class="memitem:ga0b05c6c11bba139ee2f70420f8957cc1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga0b05c6c11bba139ee2f70420f8957cc1">cff_memcmp_64</a> (const void *const a, const void *const b, size_t size)</td></tr>
 <tr class="memdesc:ga0b05c6c11bba139ee2f70420f8957cc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates if a sequence of bytes from two adress have the same value 64 bits at a time.  <a href="group__Memory.html#ga0b05c6c11bba139ee2f70420f8957cc1">More...</a><br /></td></tr>
 <tr class="separator:ga0b05c6c11bba139ee2f70420f8957cc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1de69c3a155909468ef291bdc829dc6e"><td class="memItemLeft" align="right" valign="top"><a id="a1de69c3a155909468ef291bdc829dc6e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>cff_memcpy_8</b> (const void *const src, void *const dest, size_t size)</td></tr>
-<tr class="separator:a1de69c3a155909468ef291bdc829dc6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad468d324fac5c33fb8face5a53077e7d"><td class="memItemLeft" align="right" valign="top"><a id="ad468d324fac5c33fb8face5a53077e7d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>cff_memcpy_16</b> (const void *const src, void *const dest, size_t size)</td></tr>
-<tr class="separator:ad468d324fac5c33fb8face5a53077e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaee1f881d66530582a85576f574c20b5"><td class="memItemLeft" align="right" valign="top"><a id="aaee1f881d66530582a85576f574c20b5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>cff_memcpy_32</b> (const void *const src, void *const dest, size_t size)</td></tr>
-<tr class="separator:aaee1f881d66530582a85576f574c20b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3388ff2de7f5be41ba8f16b50fa32ae7"><td class="memItemLeft" align="right" valign="top"><a id="a3388ff2de7f5be41ba8f16b50fa32ae7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>cff_memcpy_64</b> (const void *const src, void *const dest, size_t size)</td></tr>
-<tr class="separator:a3388ff2de7f5be41ba8f16b50fa32ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1de69c3a155909468ef291bdc829dc6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga1de69c3a155909468ef291bdc829dc6e">cff_memcpy_8</a> (const void *const src, void *const dest, size_t size)</td></tr>
+<tr class="memdesc:ga1de69c3a155909468ef291bdc829dc6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a sequence of bytes from src to dest 8 bits at a time.  <a href="group__Memory.html#ga1de69c3a155909468ef291bdc829dc6e">More...</a><br /></td></tr>
+<tr class="separator:ga1de69c3a155909468ef291bdc829dc6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad468d324fac5c33fb8face5a53077e7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#gad468d324fac5c33fb8face5a53077e7d">cff_memcpy_16</a> (const void *const src, void *const dest, size_t size)</td></tr>
+<tr class="memdesc:gad468d324fac5c33fb8face5a53077e7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a sequence of bytes from src to dest 16 bits at a time.  <a href="group__Memory.html#gad468d324fac5c33fb8face5a53077e7d">More...</a><br /></td></tr>
+<tr class="separator:gad468d324fac5c33fb8face5a53077e7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaee1f881d66530582a85576f574c20b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#gaaee1f881d66530582a85576f574c20b5">cff_memcpy_32</a> (const void *const src, void *const dest, size_t size)</td></tr>
+<tr class="memdesc:gaaee1f881d66530582a85576f574c20b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a sequence of bytes from src to dest 32 bits at a time.  <a href="group__Memory.html#gaaee1f881d66530582a85576f574c20b5">More...</a><br /></td></tr>
+<tr class="separator:gaaee1f881d66530582a85576f574c20b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3388ff2de7f5be41ba8f16b50fa32ae7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#ga3388ff2de7f5be41ba8f16b50fa32ae7">cff_memcpy_64</a> (const void *const src, void *const dest, size_t size)</td></tr>
+<tr class="memdesc:ga3388ff2de7f5be41ba8f16b50fa32ae7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a sequence of bytes from src to dest 64 bits at a time.  <a href="group__Memory.html#ga3388ff2de7f5be41ba8f16b50fa32ae7">More...</a><br /></td></tr>
+<tr class="separator:ga3388ff2de7f5be41ba8f16b50fa32ae7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2435b5ed5edcc3625a0ec8305c21b759"><td class="memItemLeft" align="right" valign="top"><a id="a2435b5ed5edcc3625a0ec8305c21b759"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>cff_memset_8</b> (void *const dest, char value, size_t size)</td></tr>
 <tr class="separator:a2435b5ed5edcc3625a0ec8305c21b759"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa17df1fd696d59eef769f7bb2d33cc9a"><td class="memItemLeft" align="right" valign="top"><a id="aa17df1fd696d59eef769f7bb2d33cc9a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>cff_memset_16</b> (void *const dest, short value, size_t size)</td></tr>
-<tr class="separator:aa17df1fd696d59eef769f7bb2d33cc9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa17df1fd696d59eef769f7bb2d33cc9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#gaa17df1fd696d59eef769f7bb2d33cc9a">cff_memset_16</a> (void *const dest, short value, size_t size)</td></tr>
+<tr class="memdesc:gaa17df1fd696d59eef769f7bb2d33cc9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all values of an memory block to a value 16 bits at a time.  <a href="group__Memory.html#gaa17df1fd696d59eef769f7bb2d33cc9a">More...</a><br /></td></tr>
+<tr class="separator:gaa17df1fd696d59eef769f7bb2d33cc9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadf67e79f9c78ca3fc8463712522d20f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#gadf67e79f9c78ca3fc8463712522d20f4">cff_memset_32</a> (void *const dest, int value, size_t size)</td></tr>
 <tr class="memdesc:gadf67e79f9c78ca3fc8463712522d20f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all values of an memory block to a value 32 bits at a time.  <a href="group__Memory.html#gadf67e79f9c78ca3fc8463712522d20f4">More...</a><br /></td></tr>
 <tr class="separator:gadf67e79f9c78ca3fc8463712522d20f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab20903b42f22118605a60452eb93df5f"><td class="memItemLeft" align="right" valign="top"><a id="ab20903b42f22118605a60452eb93df5f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>cff_memset_64</b> (void *const dest, long long int value, size_t size)</td></tr>
-<tr class="separator:ab20903b42f22118605a60452eb93df5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab20903b42f22118605a60452eb93df5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__Memory.html#gab20903b42f22118605a60452eb93df5f">cff_memset_64</a> (void *const dest, long long int value, size_t size)</td></tr>
+<tr class="memdesc:gab20903b42f22118605a60452eb93df5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets all values of an memory block to a value 64 bits at a time.  <a href="group__Memory.html#gab20903b42f22118605a60452eb93df5f">More...</a><br /></td></tr>
+<tr class="separator:gab20903b42f22118605a60452eb93df5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines abstractions for common memory related functions. </p>
