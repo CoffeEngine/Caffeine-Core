@@ -50,13 +50,14 @@ var searchData=
   ['cff_5fmemset_5f16_51',['cff_memset_16',['../group__Memory.html#gaa17df1fd696d59eef769f7bb2d33cc9a',1,'caffeine_memory.h']]],
   ['cff_5fmemset_5f32_52',['cff_memset_32',['../group__Memory.html#gadf67e79f9c78ca3fc8463712522d20f4',1,'caffeine_memory.h']]],
   ['cff_5fmemset_5f64_53',['cff_memset_64',['../group__Memory.html#gab20903b42f22118605a60452eb93df5f',1,'caffeine_memory.h']]],
-  ['cff_5fnone_5ferr_54',['CFF_NONE_ERR',['../caffeine__types_8h.html#ga91f950d0e5ece7b55e5deafbbf7a2175af70c25cc3771bbbe73381bce31382e6d',1,'caffeine_types.h']]],
-  ['cff_5fnot_5fequal_55',['CFF_NOT_EQUAL',['../caffeine__types_8h.html#ga2b38307e7e9df7912aa212064d1f898eaac914834d207316d56824880a5c042d1',1,'caffeine_types.h']]],
-  ['cff_5frealloc_5ferr_56',['CFF_REALLOC_ERR',['../caffeine__types_8h.html#ga91f950d0e5ece7b55e5deafbbf7a2175ab363247f070ea03aeeb42982d4ca3e44',1,'caffeine_types.h']]],
-  ['cff_5fset_5fdefault_5fallocator_57',['cff_set_default_allocator',['../group__Memory.html#gae6df5a128cc2f599951fadf5c488d92a',1,'caffeine_memory.h']]],
-  ['cff_5fstack_5falloc_58',['cff_stack_alloc',['../group__Memory.html#gab0108b146a32a216acc45e67da082452',1,'caffeine_memory.h']]],
-  ['cff_5fstack_5falloc_5ffree_59',['cff_stack_alloc_free',['../group__Memory.html#ga3a061df742a844aa0bbb3487f4962705',1,'caffeine_memory.h']]],
-  ['cff_5fstack_5frealloc_60',['cff_stack_realloc',['../group__Memory.html#gaf49b63a4451c349ef8f63b8a86410990',1,'caffeine_memory.h']]],
-  ['comparer_5ffn_61',['comparer_fn',['../group__Types.html#gab26febf6fafe6351c9d422a8bbbb6e5b',1,'caffeine_types.h']]],
-  ['context_62',['context',['../structAllocatorInterface__s.html#aea6f275096ca4e511c1fbe3babd54047',1,'AllocatorInterface_s']]]
+  ['cff_5fmemset_5f8_54',['cff_memset_8',['../group__Memory.html#ga2435b5ed5edcc3625a0ec8305c21b759',1,'caffeine_memory.h']]],
+  ['cff_5fnone_5ferr_55',['CFF_NONE_ERR',['../caffeine__types_8h.html#ga91f950d0e5ece7b55e5deafbbf7a2175af70c25cc3771bbbe73381bce31382e6d',1,'caffeine_types.h']]],
+  ['cff_5fnot_5fequal_56',['CFF_NOT_EQUAL',['../caffeine__types_8h.html#ga2b38307e7e9df7912aa212064d1f898eaac914834d207316d56824880a5c042d1',1,'caffeine_types.h']]],
+  ['cff_5frealloc_5ferr_57',['CFF_REALLOC_ERR',['../caffeine__types_8h.html#ga91f950d0e5ece7b55e5deafbbf7a2175ab363247f070ea03aeeb42982d4ca3e44',1,'caffeine_types.h']]],
+  ['cff_5fset_5fdefault_5fallocator_58',['cff_set_default_allocator',['../group__Memory.html#gae6df5a128cc2f599951fadf5c488d92a',1,'caffeine_memory.h']]],
+  ['cff_5fstack_5falloc_59',['cff_stack_alloc',['../group__Memory.html#gab0108b146a32a216acc45e67da082452',1,'caffeine_memory.h']]],
+  ['cff_5fstack_5falloc_5ffree_60',['cff_stack_alloc_free',['../group__Memory.html#ga3a061df742a844aa0bbb3487f4962705',1,'caffeine_memory.h']]],
+  ['cff_5fstack_5frealloc_61',['cff_stack_realloc',['../group__Memory.html#gaf49b63a4451c349ef8f63b8a86410990',1,'caffeine_memory.h']]],
+  ['comparer_5ffn_62',['comparer_fn',['../group__Types.html#gab26febf6fafe6351c9d422a8bbbb6e5b',1,'caffeine_types.h']]],
+  ['context_63',['context',['../structAllocatorInterface__s.html#aea6f275096ca4e511c1fbe3babd54047',1,'AllocatorInterface_s']]]
 ];

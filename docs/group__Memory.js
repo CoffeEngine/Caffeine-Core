@@ -32,6 +32,7 @@ var group__Memory =
     [ "cff_memset_16", "group__Memory.html#gaa17df1fd696d59eef769f7bb2d33cc9a", null ],
     [ "cff_memset_32", "group__Memory.html#gadf67e79f9c78ca3fc8463712522d20f4", null ],
     [ "cff_memset_64", "group__Memory.html#gab20903b42f22118605a60452eb93df5f", null ],
+    [ "cff_memset_8", "group__Memory.html#ga2435b5ed5edcc3625a0ec8305c21b759", null ],
     [ "cff_set_default_allocator", "group__Memory.html#gae6df5a128cc2f599951fadf5c488d92a", null ],
     [ "cff_stack_alloc", "group__Memory.html#gab0108b146a32a216acc45e67da082452", null ],
     [ "cff_stack_alloc_free", "group__Memory.html#ga3a061df742a844aa0bbb3487f4962705", null ],
