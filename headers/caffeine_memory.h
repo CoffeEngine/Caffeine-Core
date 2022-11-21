@@ -121,7 +121,7 @@ void cff_allocator_free(AllocatorInterface* allocator, void* ptr);
 
 /** 
 * @ingroup Memory
-* @fn void cff_allocator_free(AllocatorInterface* allocator, void* ptr )
+* @fn size_t cff_allocator_mem_size(AllocatorInterface* allocator, void* ptr)
 * @brief A function that gets the size of an allocated block.
 *
 *	This funcion calls the allocator get_size function passing the necessary parameters.
@@ -303,12 +303,10 @@ void cff_memset(void* dest, int value, size_t size);
  * @fn int cff_memcmp_8(const void* const a, const void* const b, size_t size)
 *	@brief Indicates if a sequence of bytes from two adress have the same value 8 bits at a time.
 *
-*	If the dest and src buffers overlaps use the cff_memmove instead.
-*
-*	@param [in] src pointer to the adress of the data to be copied.
-*	@param [in] des pointer to the adress that will receive the copy.
-*	@param [in] src_size lenght of bytes that will be copied.
-*	@param [in] dest_size lenght of bytes of the block that will receive the copy.
+*	@param [in] a pointer to the adress of the data to be copied.
+*	@param [in] b pointer to the adress that will receive the copy.
+*	@param [in] size lenght of sequence to be compared.
+*	@return 1 if are equals and 0 if not.
 */
 int cff_memcmp_8(const void* const a, const void* const b, size_t size);
 
@@ -317,12 +315,10 @@ int cff_memcmp_8(const void* const a, const void* const b, size_t size);
  * @fn cff_memcmp_16(const void* const a, const void* const b, size_t size)
 *	@brief Indicates if a sequence of bytes from two adress have the same value 16 bits at a time.
 *
-*	If the dest and src buffers overlaps use the cff_memmove instead.
-*
-*	@param [in] src pointer to the adress of the data to be copied.
-*	@param [in] des pointer to the adress that will receive the copy.
-*	@param [in] src_size lenght of bytes that will be copied.
-*	@param [in] dest_size lenght of bytes of the block that will receive the copy.
+*	@param [in] a pointer to the adress of the data to be copied.
+*	@param [in] b pointer to the adress that will receive the copy.
+*	@param [in] size lenght of sequence to be compared.
+*	@return 1 if are equals and 0 if not.
 */
 int cff_memcmp_16(const void* const a, const void* const b, size_t size);
 
@@ -331,12 +327,10 @@ int cff_memcmp_16(const void* const a, const void* const b, size_t size);
  * @fn cff_memcmp_32(const void* const a, const void* const b, size_t size)
 *	@brief Indicates if a sequence of bytes from two adress have the same value 32 bits at a time.
 *
-*	If the dest and src buffers overlaps use the cff_memmove instead.
-*
-*	@param [in] src pointer to the adress of the data to be copied.
-*	@param [in] des pointer to the adress that will receive the copy.
-*	@param [in] src_size lenght of bytes that will be copied.
-*	@param [in] dest_size lenght of bytes of the block that will receive the copy.
+*	@param [in] a pointer to the adress of the data to be copied.
+*	@param [in] b pointer to the adress that will receive the copy.
+*	@param [in] size lenght of sequence to be compared.
+*	@return 1 if are equals and 0 if not.
 */
 int cff_memcmp_32(const void* const a, const void* const b, size_t size);
 
@@ -345,74 +339,68 @@ int cff_memcmp_32(const void* const a, const void* const b, size_t size);
  * @fn cff_memcmp_64(const void* const a, const void* const b, size_t size)
 *	@brief Indicates if a sequence of bytes from two adress have the same value 64 bits at a time.
 *
-*	If the dest and src buffers overlaps use the cff_memmove instead.
-*
-*	@param [in] src pointer to the adress of the data to be copied.
-*	@param [in] des pointer to the adress that will receive the copy.
-*	@param [in] src_size lenght of bytes that will be copied.
-*	@param [in] dest_size lenght of bytes of the block that will receive the copy.
+*	@param [in] a pointer to the adress of the data to be copied.
+*	@param [in] b pointer to the adress that will receive the copy.
+*	@param [in] size lenght of sequence to be compared.
+*	@return 1 if are equals and 0 if not.
 */
 int cff_memcmp_64(const void* const a, const void* const b, size_t size);
 
 /** 
  * @ingroup Memory
- * @fn void cff_memcpy_8(const void* const src, void* const dest, size_t src_size, size_t dest_size)
+ * @fn void cff_memcpy_8(const void* const src, void* const dest, size_t size)
 *	@brief Copy a sequence of bytes from src to dest 8 bits at a time.
 *
 *	If the dest and src buffers overlaps use the cff_memmove instead.
 *
 *	@param [in] src pointer to the adress of the data to be copied.
 *	@param [in] des pointer to the adress that will receive the copy.
-*	@param [in] src_size lenght of bytes that will be copied.
-*	@param [in] dest_size lenght of bytes of the block that will receive the copy.
+*	@param [in] size lenght of bytes that will be copied.
 */
 void cff_memcpy_8(const void* const src, void* const dest, size_t size);
 
 /** 
  * @ingroup Memory
- * @fn void cff_memcpy_16(const void* const src, void* const dest, size_t src_size, size_t dest_size)
+ * @fn void cff_memcpy_16(const void* const src, void* const dest, size_t size)
 *	@brief Copy a sequence of bytes from src to dest 16 bits at a time.
 *
 *	If the dest and src buffers overlaps use the cff_memmove instead.
 *
 *	@param [in] src pointer to the adress of the data to be copied.
 *	@param [in] des pointer to the adress that will receive the copy.
-*	@param [in] src_size lenght of bytes that will be copied.
-*	@param [in] dest_size lenght of bytes of the block that will receive the copy.
+*	@param [in] size lenght of bytes that will be copied.
 */
 void cff_memcpy_16(const void* const src, void* const dest, size_t size);
 
 /** 
  * @ingroup Memory
- * @fn void cff_memcpy_32(const void* const src, void* const dest, size_t src_size, size_t dest_size)
+ * @fn void cff_memcpy_32(const void* const src, void* const dest, size_t size)
 *	@brief Copy a sequence of bytes from src to dest 32 bits at a time.
 *
 *	If the dest and src buffers overlaps use the cff_memmove instead.
 *
 *	@param [in] src pointer to the adress of the data to be copied.
 *	@param [in] des pointer to the adress that will receive the copy.
-*	@param [in] src_size lenght of bytes that will be copied.
-*	@param [in] dest_size lenght of bytes of the block that will receive the copy.
+*	@param [in] size lenght of bytes that will be copied.
 */
 void cff_memcpy_32(const void* const src, void* const dest, size_t size);
 
 /** 
  * @ingroup Memory
- * @fn void cff_memcpy_64(const void* const src, void* const dest, size_t src_size, size_t dest_size)
+ * @fn void cff_memcpy_64(const void* const src, void* const dest, size_t size)
 *	@brief Copy a sequence of bytes from src to dest 64 bits at a time.
 *
 *	If the dest and src buffers overlaps use the cff_memmove instead.
 *
 *	@param [in] src pointer to the adress of the data to be copied.
 *	@param [in] des pointer to the adress that will receive the copy.
-*	@param [in] src_size lenght of bytes that will be copied.
-*	@param [in] dest_size lenght of bytes of the block that will receive the copy.
+*	@param [in] size lenght of bytes that will be copied.
 */
 void cff_memcpy_64(const void* const src, void* const dest, size_t size);
 
 /** 
  * @ingroup Memory
- * @fn void cff_memset_8(void* dest, int value, size_t size)
+ * @fn void ccff_memset_8(void* const dest, char value, size_t size)
 *	@brief Sets all values of an memory block to a value 8 bits at a time.
 *
 *	@param [in] dest pointer to a memory block.
@@ -423,7 +411,7 @@ void cff_memset_8(void* const dest, char value, size_t size);
 
 /** 
  * @ingroup Memory
- * @fn void cff_memset_16(void* dest, int value, size_t size)
+ * @fn void cff_memset_16(void* const dest, short value, size_t size)
 *	@brief Sets all values of an memory block to a value 16 bits at a time.
 *
 *	@param [in] dest pointer to a memory block.
@@ -434,7 +422,7 @@ void cff_memset_16(void* const dest, short value, size_t size);
 
 /** 
  * @ingroup Memory
- * @fn void cff_memset_32(void* dest, int value, size_t size)
+ * @fn void cff_memset_32(void* const dest, int value, size_t size)
 *	@brief Sets all values of an memory block to a value 32 bits at a time.
 *
 *	@param [in] dest pointer to a memory block.
@@ -445,7 +433,7 @@ void cff_memset_32(void* const dest, int value, size_t size);
 
 /** 
  * @ingroup Memory
- * @fn void cff_memset_64(void* dest, int value, size_t size)
+ * @fn void cff_memset_64(void* const dest, long long int value, size_t size)
 *	@brief Sets all values of an memory block to a value 64 bits at a time.
 *
 *	@param [in] dest pointer to a memory block.
