@@ -37,7 +37,7 @@ jobs:
         shell: bash
       
       - name: Generate Markdown
-        run: doxybook -i doc/doxygen/xml -o docs/api -t vuepress
+        run: doxybook -i ./xml -o docs/api -t vuepress
         shell: bash
       
       - name: Deploy to GitHub Pages
