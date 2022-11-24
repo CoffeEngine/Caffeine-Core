@@ -35,7 +35,11 @@ jobs:
       - name: Create .nojekyll (ensures pages with underscores work on gh pages)
         run: touch doc/doxygen/html/.nojekyll
         shell: bash
-
+      
+      - name: Generate Markdown
+        run: doxybook -i doc/doxygen/xml -o docs/api -t vuepress
+        shell: bash
+      
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
