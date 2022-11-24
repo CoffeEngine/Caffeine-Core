@@ -1,0 +1,1405 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__Memory" kind="group">
+    <compoundname>Memory</compoundname>
+    <title>Memory</title>
+    <innerclass refid="structAllocatorInterface__s" prot="public">AllocatorInterface_s</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="group__Memory_1ga445f854a7fb44af7fd6911674d5aaf03" prot="public" static="no">
+        <type>struct <ref refid="structAllocatorInterface__s" kindref="compound">AllocatorInterface_s</ref></type>
+        <definition>typedef struct AllocatorInterface_s AllocatorInterface</definition>
+        <argsstring></argsstring>
+        <name>AllocatorInterface</name>
+        <briefdescription>
+<para>A syntax sugar for struct <ref refid="structAllocatorInterface__s" kindref="compound">AllocatorInterface_s</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Defines an interface to standardize custom allocators implementation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="1" column="0" bodyfile="headers/caffeine_memory.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__Memory_1gaaccf8c924a13e92120e947e5914fd579" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * cff_allocator_alloc</definition>
+        <argsstring>(AllocatorInterface *allocator, size_t size)</argsstring>
+        <name>cff_allocator_alloc</name>
+        <param>
+          <type><ref refid="group__Memory_1ga445f854a7fb44af7fd6911674d5aaf03" kindref="member">AllocatorInterface</ref> *</type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>A function to allocate memory using an AllocatorInterface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This funcion calls the allocator alloc function passing the necessary parameters.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">allocator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to an AllocatorInterface. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of memory block to be allocated in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a pointer to the allocated memory block or null in failure cases. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="93" column="6" declfile="headers/caffeine_memory.h" declline="93" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga2c0579d7e1221998f9aa469414b02135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cff_allocator_realloc</definition>
+        <argsstring>(AllocatorInterface *allocator, void *ptr, size_t size, void **out)</argsstring>
+        <name>cff_allocator_realloc</name>
+        <param>
+          <type><ref refid="group__Memory_1ga445f854a7fb44af7fd6911674d5aaf03" kindref="member">AllocatorInterface</ref> *</type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>A function to reallocate memory using an AllocatorInterface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This funcion calls the allocator realloc function passing the necessary parameters.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">allocator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to an AllocatorInterface. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the block that will be reallocated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new size for the memory block in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the memory block after reallocated or to null in failure case. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 in failure case or 1 in sucess case. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="108" column="5" declfile="headers/caffeine_memory.h" declline="108" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga979ab4ea6acac240194b25800bfd3ebb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_allocator_free</definition>
+        <argsstring>(AllocatorInterface *allocator, void *ptr)</argsstring>
+        <name>cff_allocator_free</name>
+        <param>
+          <type><ref refid="group__Memory_1ga445f854a7fb44af7fd6911674d5aaf03" kindref="member">AllocatorInterface</ref> *</type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>A function to deallocate memory using an AllocatorInterface. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This funcion calls the allocator dealloc function passing the necessary parameters.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">allocator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to an AllocatorInterface. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the block that will be deallocated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="120" column="6" declfile="headers/caffeine_memory.h" declline="120" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga61f19c0d35c8fe341e799ad5b98512cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t cff_allocator_mem_size</definition>
+        <argsstring>(AllocatorInterface *allocator, void *ptr)</argsstring>
+        <name>cff_allocator_mem_size</name>
+        <param>
+          <type><ref refid="group__Memory_1ga445f854a7fb44af7fd6911674d5aaf03" kindref="member">AllocatorInterface</ref> *</type>
+          <declname>allocator</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>A function that gets the size of an allocated block. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This funcion calls the allocator get_size function passing the necessary parameters.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">allocator</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to an AllocatorInterface. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the block. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the size of the block in bytes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="133" column="8" declfile="headers/caffeine_memory.h" declline="133" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga7e877bdff45190aae9631afc417aa770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="group__Memory_1ga445f854a7fb44af7fd6911674d5aaf03" kindref="member">AllocatorInterface</ref> *</type>
+        <definition>AllocatorInterface * cff_get_default_allocator</definition>
+        <argsstring>()</argsstring>
+        <name>cff_get_default_allocator</name>
+        <briefdescription>
+<para>Utility function that provides a pointer to the default memory allocator in the process. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>By default this function will return a pointer to an allocator interface that uses the functions provided by the libc (eg. malloc, realloc and free). The default allocator can be changed using the </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="145" column="20" declfile="headers/caffeine_memory.h" declline="145" declcolumn="20"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1gae6df5a128cc2f599951fadf5c488d92a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_set_default_allocator</definition>
+        <argsstring>(AllocatorInterface *allocator)</argsstring>
+        <name>cff_set_default_allocator</name>
+        <param>
+          <type><ref refid="group__Memory_1ga445f854a7fb44af7fd6911674d5aaf03" kindref="member">AllocatorInterface</ref> *</type>
+          <declname>allocator</declname>
+        </param>
+        <briefdescription>
+<para>Utility function that provides a pointer to the default memory allocator in the process. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>By default this function will return a pointer to an allocator interface that uses the functions provided by the libc (eg. malloc, realloc and free). The default allocator can be changed using the </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="157" column="6" declfile="headers/caffeine_memory.h" declline="157" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga5c01abf99f1adb5c8d9c0aab4993ae40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * cff_heap_alloc</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>cff_heap_alloc</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Allocates a memory block using the libc malloc function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of block to be allocated in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a pointer to the allocated memory block or null in failure cases.</para>
+</simplesect>
+<simplesect kind="warning"><para>The function called depends on the compiler used and target operating system. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="169" column="6" declfile="headers/caffeine_memory.h" declline="169" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga49aada1415e48822c27fbe4301466386" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cff_heap_realloc</definition>
+        <argsstring>(void *ptr, size_t size, void **out)</argsstring>
+        <name>cff_heap_realloc</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>Reallocates a memory block using the libc realloc function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the block that will be reallocated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new size for the memory block in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the memory block after reallocated or to null in failure case. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 in failure case or 1 in sucess case.</para>
+</simplesect>
+<simplesect kind="warning"><para>The function called depends on the compiler used and target operating system. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="183" column="5" declfile="headers/caffeine_memory.h" declline="183" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga6b117b042990752ddc6b92a6de2e946b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_heap_alloc_free</definition>
+        <argsstring>(void *ptr)</argsstring>
+        <name>cff_heap_alloc_free</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Releases a memory block using the libc free function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the block that will be deallocated.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>The function called depends on the compiler used and target operating system. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="194" column="6" declfile="headers/caffeine_memory.h" declline="194" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1gab0108b146a32a216acc45e67da082452" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void * cff_stack_alloc</definition>
+        <argsstring>(size_t size)</argsstring>
+        <name>cff_stack_alloc</name>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Allocates a memory block on stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of block to be allocated in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a pointer to the allocated memory block or null in failure cases.</para>
+</simplesect>
+<simplesect kind="warning"><para>The function called depends on the compiler used and target operating system. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="206" column="6" declfile="headers/caffeine_memory.h" declline="206" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1gaf49b63a4451c349ef8f63b8a86410990" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cff_stack_realloc</definition>
+        <argsstring>(void *ptr, size_t old_size, size_t size, void **out)</argsstring>
+        <name>cff_stack_realloc</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>old_size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>void **</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>Reallocates a memory block on stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Internally, this function will allocate a new block on stack, copy the data from old block to the new and try to dealloc the old block, be aware that some runtimes doesn&apos;t allow manually stack release, in such cases both memory blocks will be allocated until the end of scope.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the block that will be reallocated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the new size for the memory block in bytes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the memory block after reallocated or to null in failure case. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 in failure case or 1 in sucess case.</para>
+</simplesect>
+<simplesect kind="warning"><para>The function called depends on the compiler used and target operating system. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="223" column="5" declfile="headers/caffeine_memory.h" declline="223" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga3a061df742a844aa0bbb3487f4962705" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_stack_alloc_free</definition>
+        <argsstring>(void *ptr)</argsstring>
+        <name>cff_stack_alloc_free</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>Releases a memory block on stack. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Be aware that some runtimes doesn&apos;t allow manually stack release, in such cases this function does nothing.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the block that will be deallocated.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="warning"><para>The function called depends on the compiler used and target operating system. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="236" column="6" declfile="headers/caffeine_memory.h" declline="236" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga6b9ab770651d550cd2548265ece17cf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t cff_mem_size</definition>
+        <argsstring>(void *ptr)</argsstring>
+        <name>cff_mem_size</name>
+        <param>
+          <type>void *</type>
+          <declname>ptr</declname>
+        </param>
+        <briefdescription>
+<para>A function that gets the size of an allocated block. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the block. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the size of the block in bytes.</para>
+</simplesect>
+<simplesect kind="warning"><para>The function called depends on the compiler used and target operating system. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="248" column="8" declfile="headers/caffeine_memory.h" declline="248" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga9e9d9280f86864f85ec68406a5e9b9e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>cff_memcmp</definition>
+        <argsstring>(const void *a, const void *b, size_t size)</argsstring>
+        <name>cff_memcmp</name>
+        <param>
+          <type>const void *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const void *</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Indicates if a sequence of bytes from two adress have the same value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to an adress. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to an adress. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of sequence to be compared. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if are equals and 0 if not. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="260" column="5" declfile="headers/caffeine_memory.h" declline="260" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga6e3a3426c9610dfd1397d12838560f07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_memcpy</definition>
+        <argsstring>(const void *const src, void *const dest, size_t src_size, size_t dest_size)</argsstring>
+        <name>cff_memcpy</name>
+        <param>
+          <type>const void *const</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>void *const</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>src_size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dest_size</declname>
+        </param>
+        <briefdescription>
+<para>Copy a sequence of bytes from src to dest. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the dest and src buffers overlaps use the cff_memmove instead.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress of the data to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">des</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress that will receive the copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of bytes that will be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dest_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of bytes of the block that will receive the copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="274" column="6" declfile="headers/caffeine_memory.h" declline="274" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1gad6a6a44fbe82e8a94581c78788117237" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_memmove</definition>
+        <argsstring>(const void *const src, void *const dest, size_t src_size, size_t dest_size)</argsstring>
+        <name>cff_memmove</name>
+        <param>
+          <type>const void *const</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>void *const</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>src_size</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>dest_size</declname>
+        </param>
+        <briefdescription>
+<para>Moves a sequence of bytes from src to dest. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Better option when the src and dest buffer overlaps.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress of the data to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">des</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress that will receive the copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">src_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of bytes that will be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">dest_size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of bytes of the block that will receive the copy. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="288" column="6" declfile="headers/caffeine_memory.h" declline="288" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1gabd76bcd3d6736ee62e1c24f020426b26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_memset</definition>
+        <argsstring>(void *dest, int value, size_t size)</argsstring>
+        <name>cff_memset</name>
+        <param>
+          <type>void *</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sets all values of an memory block to a value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a memory block. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to be setted in every byte of the block. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of bytes to be setted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="299" column="6" declfile="headers/caffeine_memory.h" declline="299" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga218e303b8bc16cb29424a87793eac95c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cff_memcmp_8</definition>
+        <argsstring>(const void *const a, const void *const b, size_t size)</argsstring>
+        <name>cff_memcmp_8</name>
+        <param>
+          <type>const void *const</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const void *const</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Indicates if a sequence of bytes from two adress have the same value 8 bits at a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress of the data to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress that will receive the copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of sequence to be compared. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if are equals and 0 if not. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="311" column="5" declfile="headers/caffeine_memory.h" declline="311" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga2961128d7e32b4be2947c8e5c699ba6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>cff_memcmp_16</definition>
+        <argsstring>(const void *const a, const void *const b, size_t size)</argsstring>
+        <name>cff_memcmp_16</name>
+        <param>
+          <type>const void *const</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const void *const</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Indicates if a sequence of bytes from two adress have the same value 16 bits at a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress of the data to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress that will receive the copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of sequence to be compared. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if are equals and 0 if not. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="323" column="5" declfile="headers/caffeine_memory.h" declline="323" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1gaefe32578a5c13aae86c1343bfee710b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>cff_memcmp_32</definition>
+        <argsstring>(const void *const a, const void *const b, size_t size)</argsstring>
+        <name>cff_memcmp_32</name>
+        <param>
+          <type>const void *const</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const void *const</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Indicates if a sequence of bytes from two adress have the same value 32 bits at a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress of the data to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress that will receive the copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of sequence to be compared. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if are equals and 0 if not. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="335" column="5" declfile="headers/caffeine_memory.h" declline="335" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga0b05c6c11bba139ee2f70420f8957cc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>cff_memcmp_64</definition>
+        <argsstring>(const void *const a, const void *const b, size_t size)</argsstring>
+        <name>cff_memcmp_64</name>
+        <param>
+          <type>const void *const</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const void *const</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Indicates if a sequence of bytes from two adress have the same value 64 bits at a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress of the data to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress that will receive the copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of sequence to be compared. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if are equals and 0 if not. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="347" column="5" declfile="headers/caffeine_memory.h" declline="347" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga1de69c3a155909468ef291bdc829dc6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_memcpy_8</definition>
+        <argsstring>(const void *const src, void *const dest, size_t size)</argsstring>
+        <name>cff_memcpy_8</name>
+        <param>
+          <type>const void *const</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>void *const</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Copy a sequence of bytes from src to dest 8 bits at a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the dest and src buffers overlaps use the cff_memmove instead.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress of the data to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">des</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress that will receive the copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of bytes that will be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="360" column="6" declfile="headers/caffeine_memory.h" declline="360" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1gad468d324fac5c33fb8face5a53077e7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_memcpy_16</definition>
+        <argsstring>(const void *const src, void *const dest, size_t size)</argsstring>
+        <name>cff_memcpy_16</name>
+        <param>
+          <type>const void *const</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>void *const</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Copy a sequence of bytes from src to dest 16 bits at a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the dest and src buffers overlaps use the cff_memmove instead.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress of the data to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">des</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress that will receive the copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of bytes that will be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="373" column="6" declfile="headers/caffeine_memory.h" declline="373" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1gaaee1f881d66530582a85576f574c20b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_memcpy_32</definition>
+        <argsstring>(const void *const src, void *const dest, size_t size)</argsstring>
+        <name>cff_memcpy_32</name>
+        <param>
+          <type>const void *const</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>void *const</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Copy a sequence of bytes from src to dest 32 bits at a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the dest and src buffers overlaps use the cff_memmove instead.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress of the data to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">des</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress that will receive the copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of bytes that will be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="386" column="6" declfile="headers/caffeine_memory.h" declline="386" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga3388ff2de7f5be41ba8f16b50fa32ae7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_memcpy_64</definition>
+        <argsstring>(const void *const src, void *const dest, size_t size)</argsstring>
+        <name>cff_memcpy_64</name>
+        <param>
+          <type>const void *const</type>
+          <declname>src</declname>
+        </param>
+        <param>
+          <type>void *const</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Copy a sequence of bytes from src to dest 64 bits at a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the dest and src buffers overlaps use the cff_memmove instead.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">src</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress of the data to be copied. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">des</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the adress that will receive the copy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of bytes that will be copied. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="399" column="6" declfile="headers/caffeine_memory.h" declline="399" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1ga2435b5ed5edcc3625a0ec8305c21b759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_memset_8</definition>
+        <argsstring>(void *const dest, char value, size_t size)</argsstring>
+        <name>cff_memset_8</name>
+        <param>
+          <type>void *const</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sets all values of an memory block to a value 8 bits at a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a memory block. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to be setted in every byte of the block. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of bytes to be setted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="410" column="6" declfile="headers/caffeine_memory.h" declline="410" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1gaa17df1fd696d59eef769f7bb2d33cc9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_memset_16</definition>
+        <argsstring>(void *const dest, short value, size_t size)</argsstring>
+        <name>cff_memset_16</name>
+        <param>
+          <type>void *const</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>short</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sets all values of an memory block to a value 16 bits at a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a memory block. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to be setted in every byte of the block. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of bytes to be setted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="421" column="6" declfile="headers/caffeine_memory.h" declline="421" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1gadf67e79f9c78ca3fc8463712522d20f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_memset_32</definition>
+        <argsstring>(void *const dest, int value, size_t size)</argsstring>
+        <name>cff_memset_32</name>
+        <param>
+          <type>void *const</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sets all values of an memory block to a value 32 bits at a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a memory block. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to be setted in every byte of the block. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of bytes to be setted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="432" column="6" declfile="headers/caffeine_memory.h" declline="432" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="group__Memory_1gab20903b42f22118605a60452eb93df5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cff_memset_64</definition>
+        <argsstring>(void *const dest, long long int value, size_t size)</argsstring>
+        <name>cff_memset_64</name>
+        <param>
+          <type>void *const</type>
+          <declname>dest</declname>
+        </param>
+        <param>
+          <type>long long int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Sets all values of an memory block to a value 64 bits at a time. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">dest</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to a memory block. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>value to be setted in every byte of the block. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>lenght of bytes to be setted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="443" column="6" declfile="headers/caffeine_memory.h" declline="443" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

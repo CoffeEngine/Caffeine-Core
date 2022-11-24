@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="caffeine__macros_8h" kind="file" language="C++">
+    <compoundname>caffeine_macros.h</compoundname>
+    <includes refid="caffeine__flags_8h" local="yes">caffeine_flags.h</includes>
+    <includedby refid="caffeine__assertions_8h" local="yes">caffeine_assertions.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>caffeine_macros.h</label>
+        <link refid="caffeine__macros_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>caffeine_flags.h</label>
+        <link refid="caffeine__flags_8h_source"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>caffeine_macros.h</label>
+        <link refid="caffeine__macros_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>caffeine_assertions.h</label>
+        <link refid="caffeine__assertions_8h"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="caffeine__macros_8h_1aaacf2c3c531900794304a532f46a84f7" prot="public" static="no">
+        <name>CFF_FILENAME</name>
+        <initializer>(strrchr(__FILE__, &apos;\\&apos;) ? strrchr(__FILE__, &apos;\\&apos;) + 1 : __FILE__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_macros.h" line="7" column="9" bodyfile="headers/caffeine_macros.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="caffeine__macros_8h_1a87f1579ef20f07f9636320d06553dc07" prot="public" static="no">
+        <name>cff_cast</name>
+        <param><defname>type</defname></param>
+        <param><defname>value</defname></param>
+        <initializer>(*(type*)&amp;value)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_macros.h" line="12" column="9" bodyfile="headers/caffeine_macros.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CAFFEINE_UTILS_MACROS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAFFEINE_UTILS_MACROS_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;caffeine_flags.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>CFF_OS<sp/>==<sp/>WINDOWS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_FILENAME<sp/>(strrchr(__FILE__,<sp/>&apos;\\&apos;)<sp/>?<sp/>strrchr(__FILE__,<sp/>&apos;\\&apos;)<sp/>+<sp/>1<sp/>:<sp/>__FILE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_FILENAME<sp/>(strrchr(__FILE__,<sp/>&apos;/&apos;)<sp/>?<sp/>strrchr(__FILE__,<sp/>&apos;/&apos;)<sp/>+<sp/>1<sp/>:<sp/>__FILE__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_cast(type,value)(*(type*)&amp;value)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="headers/caffeine_macros.h"/>
+  </compounddef>
+</doxygen>

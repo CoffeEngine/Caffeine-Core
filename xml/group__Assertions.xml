@@ -1,0 +1,264 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="group__Assertions" kind="group">
+    <compoundname>Assertions</compoundname>
+    <title>Assertions</title>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" prot="public" static="no">
+        <name>cff_assert_msg</name>
+        <param><defname>EXP</defname></param>
+        <param><defname>MSG</defname></param>
+        <initializer>for (unsigned char __assertion_flag__ = (EXP); !(__assertion_flag__) ; assert(__assertion_flag__) ) { printf(&quot;[%s::%s]@n %s@n@n&quot;,CFF_FILENAME,__FUNCTION__,MSG); }</initializer>
+        <briefdescription>
+<para>Asserts the expression <emphasis>EXP</emphasis> and case it evaluates to false prints the message <emphasis>MSG</emphasis> on STDOUT. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="48" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gaed0c3edb84a6177123f07e936f71108f" prot="public" static="no">
+        <name>cff_assert_param_not_null</name>
+        <param><defname>PARAM</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((void*)(PARAM) != NULL, &quot;Invalid Parameter Value: &quot; #PARAM &quot; couldn&apos;t be null&quot; )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is not NULL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="57" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga2abe2a139ec4abf9a2f690bd9f2a1608" prot="public" static="no">
+        <name>cff_assert_param_not_zero</name>
+        <param><defname>PARAM</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) != 0, &quot;Invalid Parameter Value: &quot; #PARAM &quot; couldn&apos;t be 0&quot; )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is not 0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="66" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gab051e89d370b53bcedc22778b138f2e4" prot="public" static="no">
+        <name>cff_assert_param_equals</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) == (VALUE), &quot;Invalid Parameter Value: &quot; #PARAM &quot; shout be equals to &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is equals to <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="75" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gac3b56bab5d51bb4039c284bcc5c71467" prot="public" static="no">
+        <name>cff_assert_param_greater</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &gt; (VALUE), &quot;Invalid Parameter Value: &quot; #PARAM &quot; shout be greater than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is greater than <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="84" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gaa1446e3b14a3d3a77bd1b57ebbac7344" prot="public" static="no">
+        <name>cff_assert_param_greater_eq</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &gt;= (VALUE), &quot;Invalid Parameter Value: &quot; #PARAM &quot; shout be equal or greater than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is greater or equals to <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="93" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga5eb134653288f232b24447d7a3e57e8e" prot="public" static="no">
+        <name>cff_assert_param_less</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &lt; (VALUE), &quot;Invalid Parameter Value: &quot; #PARAM &quot; shout be less than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is less than <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="102" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga764995c1b8ab355a2bf413a98501dbdf" prot="public" static="no">
+        <name>cff_assert_param_less_eq</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &lt;= (VALUE), &quot;Invalid Parameter Value: &quot; #PARAM &quot; shout be equal or less than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is less or equals to <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="111" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga7c28b38f6d018857bdd98f007df31532" prot="public" static="no">
+        <name>cff_assert_not_null</name>
+        <param><defname>PARAM</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((void*)(PARAM) != NULL, &quot;Invalid Value: &quot; #PARAM &quot; couldn&apos;t be null&quot; )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is not NULL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="120" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gaa36eca8c7302fa87d493fd81344b6946" prot="public" static="no">
+        <name>cff_assert_not_zero</name>
+        <param><defname>PARAM</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) != 0, &quot;Invalid Value: &quot; #PARAM &quot; couldn&apos;t be 0&quot; )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is not 0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="129" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga9b4f87b50013ca874d95035549b3cdce" prot="public" static="no">
+        <name>cff_assert_equals</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) == (VALUE), &quot;Invalid Value: &quot; #PARAM &quot; shout be equals to &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is equals to <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="138" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga227dc4938272f865ed0be199fff23cc1" prot="public" static="no">
+        <name>cff_assert_greater</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &gt; (VALUE), &quot;Invalid Value: &quot; #PARAM &quot; shout be greater than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is greater than <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="147" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gaadc5125b472c2a56252e919d423b7d96" prot="public" static="no">
+        <name>cff_assert_greater_eq</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &gt;= (VALUE), &quot;Invalid Value: &quot; #PARAM &quot; shout be equal or greater than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is greater or equals to <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="156" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga799f63a0f04570bd112144a1d2b3bc5d" prot="public" static="no">
+        <name>cff_assert_less</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &lt; (VALUE), &quot;Invalid Value: &quot; #PARAM &quot; shout be less than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is less than <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="165" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gaa40ee9b4e8415289fa1cafd6c4aa8a61" prot="public" static="no">
+        <name>cff_assert_less_eq</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &lt;= (VALUE), &quot;Invalid Value: &quot; #PARAM &quot; shout be equal or less than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is less or equals to <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="174" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

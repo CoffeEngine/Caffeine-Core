@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_7f57b1e41c5acd0e859ae5f3a2b075a9" kind="dir">
+    <compoundname>headers</compoundname>
+    <innerfile refid="caffeine__assertions_8h">caffeine_assertions.h</innerfile>
+    <innerfile refid="caffeine__flags_8h">caffeine_flags.h</innerfile>
+    <innerfile refid="caffeine__macros_8h">caffeine_macros.h</innerfile>
+    <innerfile refid="caffeine__memory_8h">caffeine_memory.h</innerfile>
+    <innerfile refid="caffeine__types_8h">caffeine_types.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="headers/"/>
+  </compounddef>
+</doxygen>

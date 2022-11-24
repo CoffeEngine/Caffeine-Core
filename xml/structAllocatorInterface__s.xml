@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structAllocatorInterface__s" kind="struct" language="C++" prot="public">
+    <compoundname>AllocatorInterface_s</compoundname>
+    <includes refid="caffeine__memory_8h" local="no">caffeine_memory.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAllocatorInterface__s_1a1855c1a93794bd338c42454e08a82563" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* AllocatorInterface_s::alloc) (void *context, size_t size)</definition>
+        <argsstring>)(void *context, size_t size)</argsstring>
+        <name>alloc</name>
+        <briefdescription>
+<para>A function pointer to a memory allocation function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer for the context data needed by the allocator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of memory block to be allocated in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a pointer to the allocated memory block or null in failure cases. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="34" column="1" bodyfile="headers/caffeine_memory.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAllocatorInterface__s_1a6a84cf495d2e52a254626826f2fce92d" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* AllocatorInterface_s::realloc) (void *context, void *ptr, size_t size)</definition>
+        <argsstring>)(void *context, void *ptr, size_t size)</argsstring>
+        <name>realloc</name>
+        <briefdescription>
+<para>A function pointer to a memory reallocation function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer for the context data needed by the allocator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the memory block previusly allocated. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the size of memory block to be allocated in bytes. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a pointer to the reallocated memory block or null in failure cases. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="44" column="1" bodyfile="headers/caffeine_memory.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAllocatorInterface__s_1a40c6069c89970183f04e7928ff944447" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* AllocatorInterface_s::free) (void *context, void *ptr)</definition>
+        <argsstring>)(void *context, void *ptr)</argsstring>
+        <name>free</name>
+        <briefdescription>
+<para>A function pointer to a memory deallocation function. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer for the context data needed by the allocator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the memory block previusly allocated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="52" column="1" bodyfile="headers/caffeine_memory.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAllocatorInterface__s_1a6f4b448c1e09551737aa5afa0382d8a3" prot="public" static="no" mutable="no">
+        <type>size_t(*</type>
+        <definition>size_t(* AllocatorInterface_s::get_size) (void *context, void *ptr)</definition>
+        <argsstring>)(void *context, void *ptr)</argsstring>
+        <name>get_size</name>
+        <briefdescription>
+<para>A function pointer to function that gets the size of an allocated block. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">context</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer for the context data needed by the allocator. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">ptr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer to the memory block previusly allocated. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the size of the block in bytes. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="61" column="1" bodyfile="headers/caffeine_memory.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAllocatorInterface__s_1aea6f275096ca4e511c1fbe3babd54047" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* AllocatorInterface_s::context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <briefdescription>
+<para>A pointer to any auxiliaty data needed by the allocator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The purporse of this pointer is to keep track of a possible information that the allocator maybe need to know (eg. a linked list with allocated blocks). This pointer will be passed to every function defined by this interface. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_memory.h" line="69" column="6" bodyfile="headers/caffeine_memory.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines an interface to standardize custom allocators implementation. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="headers/caffeine_memory.h" line="25" column="1" bodyfile="headers/caffeine_memory.h" bodystart="24" bodyend="70"/>
+    <listofallmembers>
+      <member refid="structAllocatorInterface__s_1a1855c1a93794bd338c42454e08a82563" prot="public" virt="non-virtual"><scope>AllocatorInterface_s</scope><name>alloc</name></member>
+      <member refid="structAllocatorInterface__s_1aea6f275096ca4e511c1fbe3babd54047" prot="public" virt="non-virtual"><scope>AllocatorInterface_s</scope><name>context</name></member>
+      <member refid="structAllocatorInterface__s_1a40c6069c89970183f04e7928ff944447" prot="public" virt="non-virtual"><scope>AllocatorInterface_s</scope><name>free</name></member>
+      <member refid="structAllocatorInterface__s_1a6f4b448c1e09551737aa5afa0382d8a3" prot="public" virt="non-virtual"><scope>AllocatorInterface_s</scope><name>get_size</name></member>
+      <member refid="structAllocatorInterface__s_1a6a84cf495d2e52a254626826f2fce92d" prot="public" virt="non-virtual"><scope>AllocatorInterface_s</scope><name>realloc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

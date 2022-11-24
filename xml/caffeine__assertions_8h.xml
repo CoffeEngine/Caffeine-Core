@@ -1,0 +1,365 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="caffeine__assertions_8h" kind="file" language="C++">
+    <compoundname>caffeine_assertions.h</compoundname>
+    <includes local="no">assert.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="caffeine__macros_8h" local="yes">caffeine_macros.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>caffeine_macros.h</label>
+        <link refid="caffeine__macros_8h_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>assert.h</label>
+      </node>
+      <node id="1">
+        <label>caffeine_assertions.h</label>
+        <link refid="caffeine__assertions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>caffeine_flags.h</label>
+        <link refid="caffeine__flags_8h_source"/>
+      </node>
+      <node id="3">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" prot="public" static="no">
+        <name>cff_assert_msg</name>
+        <param><defname>EXP</defname></param>
+        <param><defname>MSG</defname></param>
+        <initializer>for (unsigned char __assertion_flag__ = (EXP); !(__assertion_flag__) ; assert(__assertion_flag__) ) { printf(&quot;[%s::%s]@n %s@n@n&quot;,CFF_FILENAME,__FUNCTION__,MSG); }</initializer>
+        <briefdescription>
+<para>Asserts the expression <emphasis>EXP</emphasis> and case it evaluates to false prints the message <emphasis>MSG</emphasis> on STDOUT. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="48" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gaed0c3edb84a6177123f07e936f71108f" prot="public" static="no">
+        <name>cff_assert_param_not_null</name>
+        <param><defname>PARAM</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((void*)(PARAM) != NULL, &quot;Invalid Parameter Value: &quot; #PARAM &quot; couldn&apos;t be null&quot; )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is not NULL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="57" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga2abe2a139ec4abf9a2f690bd9f2a1608" prot="public" static="no">
+        <name>cff_assert_param_not_zero</name>
+        <param><defname>PARAM</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) != 0, &quot;Invalid Parameter Value: &quot; #PARAM &quot; couldn&apos;t be 0&quot; )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is not 0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="66" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gab051e89d370b53bcedc22778b138f2e4" prot="public" static="no">
+        <name>cff_assert_param_equals</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) == (VALUE), &quot;Invalid Parameter Value: &quot; #PARAM &quot; shout be equals to &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is equals to <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="75" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gac3b56bab5d51bb4039c284bcc5c71467" prot="public" static="no">
+        <name>cff_assert_param_greater</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &gt; (VALUE), &quot;Invalid Parameter Value: &quot; #PARAM &quot; shout be greater than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is greater than <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="84" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gaa1446e3b14a3d3a77bd1b57ebbac7344" prot="public" static="no">
+        <name>cff_assert_param_greater_eq</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &gt;= (VALUE), &quot;Invalid Parameter Value: &quot; #PARAM &quot; shout be equal or greater than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is greater or equals to <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="93" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga5eb134653288f232b24447d7a3e57e8e" prot="public" static="no">
+        <name>cff_assert_param_less</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &lt; (VALUE), &quot;Invalid Parameter Value: &quot; #PARAM &quot; shout be less than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is less than <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="102" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga764995c1b8ab355a2bf413a98501dbdf" prot="public" static="no">
+        <name>cff_assert_param_less_eq</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &lt;= (VALUE), &quot;Invalid Parameter Value: &quot; #PARAM &quot; shout be equal or less than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is less or equals to <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="111" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga7c28b38f6d018857bdd98f007df31532" prot="public" static="no">
+        <name>cff_assert_not_null</name>
+        <param><defname>PARAM</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((void*)(PARAM) != NULL, &quot;Invalid Value: &quot; #PARAM &quot; couldn&apos;t be null&quot; )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is not NULL. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="120" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gaa36eca8c7302fa87d493fd81344b6946" prot="public" static="no">
+        <name>cff_assert_not_zero</name>
+        <param><defname>PARAM</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) != 0, &quot;Invalid Value: &quot; #PARAM &quot; couldn&apos;t be 0&quot; )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is not 0. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="129" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga9b4f87b50013ca874d95035549b3cdce" prot="public" static="no">
+        <name>cff_assert_equals</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) == (VALUE), &quot;Invalid Value: &quot; #PARAM &quot; shout be equals to &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is equals to <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="138" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga227dc4938272f865ed0be199fff23cc1" prot="public" static="no">
+        <name>cff_assert_greater</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &gt; (VALUE), &quot;Invalid Value: &quot; #PARAM &quot; shout be greater than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is greater than <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="147" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gaadc5125b472c2a56252e919d423b7d96" prot="public" static="no">
+        <name>cff_assert_greater_eq</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &gt;= (VALUE), &quot;Invalid Value: &quot; #PARAM &quot; shout be equal or greater than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is greater or equals to <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="156" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1ga799f63a0f04570bd112144a1d2b3bc5d" prot="public" static="no">
+        <name>cff_assert_less</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &lt; (VALUE), &quot;Invalid Value: &quot; #PARAM &quot; shout be less than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is less than <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="165" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="group__Assertions_1gaa40ee9b4e8415289fa1cafd6c4aa8a61" prot="public" static="no">
+        <name>cff_assert_less_eq</name>
+        <param><defname>PARAM</defname></param>
+        <param><defname>VALUE</defname></param>
+        <initializer><ref refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" kindref="member">cff_assert_msg</ref>((PARAM) &lt;= (VALUE), &quot;Invalid Value: &quot; #PARAM &quot; shout be equal or less than &quot; #VALUE )</initializer>
+        <briefdescription>
+<para>Asserts the value of <emphasis>PARAM</emphasis> is less or equals to <emphasis>VALUE</emphasis>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="warning"><para>Only when NDEBUG is not defined. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="headers/caffeine_assertions.h" line="174" column="9" bodyfile="headers/caffeine_assertions.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines assertion macros. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file defines macros for both parameter and general purpose validation with a friendly message. The assertions will be defined only on debug mode </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#ifndef<sp/>CAFFEINE_UTILS_ASSERTIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAFFEINE_UTILS_ASSERTIONS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;assert.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;caffeine_macros.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>NDEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_msg(EXP,<sp/>MSG)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_param_not_null(PARAM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_param_not_zero(PARAM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_param_equals(PARAM,VALUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_param_greater(PARAM,VALUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_param_greater_eq(PARAM,VALUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_param_less(PARAM,VALUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_param_less_eq(PARAM,VALUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_not_null(PARAM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_not_zero(PARAM)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_equals(PARAM,VALUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_greater(PARAM,VALUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_greater_eq(PARAM,VALUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_less(PARAM,VALUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>cff_assert_less_eq(PARAM,VALUE)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="group__Assertions_1ga43c252bc2eadcfff7394a7ba6bb5e8be" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_msg(EXP,<sp/>MSG)<sp/>for<sp/>(unsigned<sp/>char<sp/>__assertion_flag__<sp/>=<sp/>(EXP);<sp/>!(__assertion_flag__)<sp/>;<sp/>assert(__assertion_flag__)<sp/>)<sp/>{<sp/>printf(&quot;[%s::%s]@n<sp/>%s@n@n&quot;,CFF_FILENAME,__FUNCTION__,MSG);<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="group__Assertions_1gaed0c3edb84a6177123f07e936f71108f" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_param_not_null(PARAM)<sp/>cff_assert_msg((void*)(PARAM)<sp/>!=<sp/>NULL,<sp/>&quot;Invalid<sp/>Parameter<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>couldn&apos;t<sp/>be<sp/>null&quot;<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="group__Assertions_1ga2abe2a139ec4abf9a2f690bd9f2a1608" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_param_not_zero(PARAM)<sp/>cff_assert_msg((PARAM)<sp/>!=<sp/>0,<sp/>&quot;Invalid<sp/>Parameter<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>couldn&apos;t<sp/>be<sp/>0&quot;<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="group__Assertions_1gab051e89d370b53bcedc22778b138f2e4" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_param_equals(PARAM,VALUE)<sp/>cff_assert_msg((PARAM)<sp/>==<sp/>(VALUE),<sp/>&quot;Invalid<sp/>Parameter<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>shout<sp/>be<sp/>equals<sp/>to<sp/>&quot;<sp/>#VALUE<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="group__Assertions_1gac3b56bab5d51bb4039c284bcc5c71467" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_param_greater(PARAM,VALUE)<sp/>cff_assert_msg((PARAM)<sp/>&gt;<sp/>(VALUE),<sp/>&quot;Invalid<sp/>Parameter<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>shout<sp/>be<sp/>greater<sp/>than<sp/>&quot;<sp/>#VALUE<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="group__Assertions_1gaa1446e3b14a3d3a77bd1b57ebbac7344" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_param_greater_eq(PARAM,VALUE)<sp/>cff_assert_msg((PARAM)<sp/>&gt;=<sp/>(VALUE),<sp/>&quot;Invalid<sp/>Parameter<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>shout<sp/>be<sp/>equal<sp/>or<sp/>greater<sp/>than<sp/>&quot;<sp/>#VALUE<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="group__Assertions_1ga5eb134653288f232b24447d7a3e57e8e" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_param_less(PARAM,VALUE)<sp/>cff_assert_msg((PARAM)<sp/>&lt;<sp/>(VALUE),<sp/>&quot;Invalid<sp/>Parameter<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>shout<sp/>be<sp/>less<sp/>than<sp/>&quot;<sp/>#VALUE<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="group__Assertions_1ga764995c1b8ab355a2bf413a98501dbdf" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_param_less_eq(PARAM,VALUE)<sp/>cff_assert_msg((PARAM)<sp/>&lt;=<sp/>(VALUE),<sp/>&quot;Invalid<sp/>Parameter<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>shout<sp/>be<sp/>equal<sp/>or<sp/>less<sp/>than<sp/>&quot;<sp/>#VALUE<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="group__Assertions_1ga7c28b38f6d018857bdd98f007df31532" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_not_null(PARAM)<sp/>cff_assert_msg((void*)(PARAM)<sp/>!=<sp/>NULL,<sp/>&quot;Invalid<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>couldn&apos;t<sp/>be<sp/>null&quot;<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129" refid="group__Assertions_1gaa36eca8c7302fa87d493fd81344b6946" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_not_zero(PARAM)<sp/>cff_assert_msg((PARAM)<sp/>!=<sp/>0,<sp/>&quot;Invalid<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>couldn&apos;t<sp/>be<sp/>0&quot;<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="group__Assertions_1ga9b4f87b50013ca874d95035549b3cdce" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_equals(PARAM,VALUE)<sp/>cff_assert_msg((PARAM)<sp/>==<sp/>(VALUE),<sp/>&quot;Invalid<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>shout<sp/>be<sp/>equals<sp/>to<sp/>&quot;<sp/>#VALUE<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147" refid="group__Assertions_1ga227dc4938272f865ed0be199fff23cc1" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_greater(PARAM,VALUE)<sp/>cff_assert_msg((PARAM)<sp/>&gt;<sp/>(VALUE),<sp/>&quot;Invalid<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>shout<sp/>be<sp/>greater<sp/>than<sp/>&quot;<sp/>#VALUE<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="group__Assertions_1gaadc5125b472c2a56252e919d423b7d96" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_greater_eq(PARAM,VALUE)<sp/>cff_assert_msg((PARAM)<sp/>&gt;=<sp/>(VALUE),<sp/>&quot;Invalid<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>shout<sp/>be<sp/>equal<sp/>or<sp/>greater<sp/>than<sp/>&quot;<sp/>#VALUE<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165" refid="group__Assertions_1ga799f63a0f04570bd112144a1d2b3bc5d" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_less(PARAM,VALUE)<sp/>cff_assert_msg((PARAM)<sp/>&lt;<sp/>(VALUE),<sp/>&quot;Invalid<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>shout<sp/>be<sp/>less<sp/>than<sp/>&quot;<sp/>#VALUE<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="group__Assertions_1gaa40ee9b4e8415289fa1cafd6c4aa8a61" refkind="member"><highlight class="preprocessor">#define<sp/>cff_assert_less_eq(PARAM,VALUE)<sp/>cff_assert_msg((PARAM)<sp/>&lt;=<sp/>(VALUE),<sp/>&quot;Invalid<sp/>Value:<sp/>&quot;<sp/>#PARAM<sp/>&quot;<sp/>shout<sp/>be<sp/>equal<sp/>or<sp/>less<sp/>than<sp/>&quot;<sp/>#VALUE<sp/>)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="headers/caffeine_assertions.h"/>
+  </compounddef>
+</doxygen>
