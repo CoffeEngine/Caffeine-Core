@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="caffeine__flags_8h" kind="file" language="C++">
     <compoundname>caffeine_flags.h</compoundname>
     <includedby refid="caffeine__macros_8h" local="yes">caffeine_macros.h</includedby>
@@ -116,10 +116,10 @@
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAFFEINE_UTILS_FLAGS_H</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_OS<sp/>UNDEF<sp/>//<sp/>values:<sp/>UNDEF,<sp/>WINDOWS,<sp/>UNIX,<sp/>OSX,<sp/>IPHONE,<sp/>MAC,<sp/>LINUX,<sp/>BSD,<sp/>DRAGONFLY,<sp/>FREEBSD,<sp/>NETBSD,<sp/>OPENBSD,<sp/>ANDROID,<sp/>SOLARIS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_ARCH<sp/>UNDEF<sp/>//<sp/>values:<sp/>UNDEF,<sp/>ARM,<sp/>MIPS,<sp/>RISCV,<sp/>X86_32,<sp/>X86_64</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_COMP<sp/>UNDEF<sp/>//<sp/>values:<sp/>GCC,<sp/>CLANG,<sp/>MSVC</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_LANG<sp/>C<sp/>//<sp/>values:<sp/>C,<sp/>CPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_OS<sp/>UNDEF<sp/></highlight><highlight class="comment">//<sp/>values:<sp/>UNDEF,<sp/>WINDOWS,<sp/>UNIX,<sp/>OSX,<sp/>IPHONE,<sp/>MAC,<sp/>LINUX,<sp/>BSD,<sp/>DRAGONFLY,<sp/>FREEBSD,<sp/>NETBSD,<sp/>OPENBSD,<sp/>ANDROID,<sp/>SOLARIS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_ARCH<sp/>UNDEF<sp/></highlight><highlight class="comment">//<sp/>values:<sp/>UNDEF,<sp/>ARM,<sp/>MIPS,<sp/>RISCV,<sp/>X86_32,<sp/>X86_64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_COMP<sp/>UNDEF<sp/></highlight><highlight class="comment">//<sp/>values:<sp/>GCC,<sp/>CLANG,<sp/>MSVC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_LANG<sp/>C<sp/></highlight><highlight class="comment">//<sp/>values:<sp/>C,<sp/>CPP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NO_ALIAS<sp/>__declspec(noalias)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
@@ -134,13 +134,13 @@
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_OS<sp/>WINDOWS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ISWINDOWS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_WIN32<sp/>||<sp/>_WIN64<sp/>||<sp/>__CYGWIN__<sp/>||<sp/>_POSIX_VERSION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>_WIN32<sp/>||<sp/>_WIN64<sp/>||<sp/>__CYGWIN__<sp/>||<sp/>_POSIX_VERSION</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>unix<sp/>||<sp/>__unix<sp/>||<sp/>__unix__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_OS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_OS<sp/>UNIX</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ISUNIX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>unix<sp/>||<sp/>__unix<sp/>||<sp/>__unix__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>unix<sp/>||<sp/>__unix<sp/>||<sp/>__unix__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__APLE__<sp/>||<sp/>__MACH__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_OS</highlight><highlight class="normal"></highlight></codeline>
@@ -150,21 +150,21 @@
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>TARGET_OS_IPHONE</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_OS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_OS<sp/>IPHONE</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>TARGET_OS_IPHONE<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>TARGET_OS_IPHONE<sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>TARGET_OS_MAC</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_OS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_OS<sp/>MAC</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>TARGET_OS_MAC<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>TARGET_OS_MAC<sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__APLE__<sp/>||<sp/>__MACH__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__APLE__<sp/>||<sp/>__MACH__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__linux__<sp/>||<sp/>linux<sp/>||<sp/>__linux</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_OS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_OS<sp/>LINUX</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ISUNIX</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ISLINUX</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__linux__<sp/>||<sp/>linux<sp/>||<sp/>__linux</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__linux__<sp/>||<sp/>linux<sp/>||<sp/>__linux</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>BSD</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_OS</highlight><highlight class="normal"></highlight></codeline>
@@ -174,24 +174,24 @@
 <codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__DragonFly__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_OS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_OS<sp/>DRAGONFLY</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__DragonFly__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__DragonFly__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__FreeBSD__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_OS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_OS<sp/>FREEBSD</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__FreeBSD__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__FreeBSD__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__NetBSD__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_OS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_OS<sp/>NETBSD</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__NetBSD__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__NetBSD__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__OpenBSD__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_OS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_OS<sp/>OPENBSD</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__OpenBSD__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__OpenBSD__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>BSD</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>BSD</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__ANDROID__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="83"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_OS</highlight><highlight class="normal"></highlight></codeline>
@@ -199,12 +199,12 @@
 <codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ISUNIX</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ISLINUX</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ISANDROID</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__ANDROID__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__ANDROID__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__sun</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_OS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_OS<sp/>SOLARIS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__sun</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__sun</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="94"><highlight class="normal"></highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
 <codeline lineno="96"><highlight class="normal"></highlight></codeline>
@@ -215,27 +215,27 @@
 <codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__ARM_ARCH<sp/>||<sp/>__TARGET_ARCH_ARM<sp/>||<sp/>__TARGET_ARCH_THUMB<sp/>||<sp/>_M_ARM<sp/>||<sp/>__arm__<sp/>||<sp/>__arm64<sp/>||<sp/>__thumb__<sp/>||<sp/>_M_ARM64<sp/>||<sp/>__aarch64__<sp/>||<sp/>__AARCH64EL__<sp/>||<sp/>__ARM_ARCH_7__<sp/>||<sp/>__ARM_ARCH_7A__<sp/>||<sp/>__ARM_ARCH_7R__<sp/>||<sp/>__ARM_ARCH_7M__<sp/>||<sp/>__ARM_ARCH_6K__<sp/>||<sp/>__ARM_ARCH_6Z__<sp/>||<sp/>__ARM_ARCH_6KZ__<sp/>||<sp/>__ARM_ARCH_6T2__<sp/>||<sp/>__ARM_ARCH_5TE__<sp/>||<sp/>__ARM_ARCH_5TEJ__<sp/>||<sp/>__ARM_ARCH_4T__<sp/>||<sp/>__ARM_ARCH_4__<sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_ARCH</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_ARCH<sp/>ARM</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__ARM_ARCH<sp/>||<sp/>__TARGET_ARCH_ARM<sp/>||<sp/>__TARGET_ARCH_THUMB<sp/>||<sp/>_M_ARM<sp/>||<sp/>__arm__<sp/>||<sp/>__arm64<sp/>||<sp/>__thumb__<sp/>||<sp/>_M_ARM64<sp/>||<sp/>__aarch64__<sp/>||<sp/>__AARCH64EL__<sp/>||<sp/>__ARM_ARCH_7__<sp/>||<sp/>__ARM_ARCH_7A__<sp/>||<sp/>__ARM_ARCH_7R__<sp/>||<sp/>__ARM_ARCH_7M__<sp/>||<sp/>__ARM_ARCH_6K__<sp/>||<sp/>__ARM_ARCH_6Z__<sp/>||<sp/>__ARM_ARCH_6KZ__<sp/>||<sp/>__ARM_ARCH_6T2__<sp/>||<sp/>__ARM_ARCH_5TE__<sp/>||<sp/>__ARM_ARCH_5TEJ__<sp/>||<sp/>__ARM_ARCH_4T__<sp/>||<sp/>__ARM_ARCH_4__<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__ARM_ARCH<sp/>||<sp/>__TARGET_ARCH_ARM<sp/>||<sp/>__TARGET_ARCH_THUMB<sp/>||<sp/>_M_ARM<sp/>||<sp/>__arm__<sp/>||<sp/>__arm64<sp/>||<sp/>__thumb__<sp/>||<sp/>_M_ARM64<sp/>||<sp/>__aarch64__<sp/>||<sp/>__AARCH64EL__<sp/>||<sp/>__ARM_ARCH_7__<sp/>||<sp/>__ARM_ARCH_7A__<sp/>||<sp/>__ARM_ARCH_7R__<sp/>||<sp/>__ARM_ARCH_7M__<sp/>||<sp/>__ARM_ARCH_6K__<sp/>||<sp/>__ARM_ARCH_6Z__<sp/>||<sp/>__ARM_ARCH_6KZ__<sp/>||<sp/>__ARM_ARCH_6T2__<sp/>||<sp/>__ARM_ARCH_5TE__<sp/>||<sp/>__ARM_ARCH_5TEJ__<sp/>||<sp/>__ARM_ARCH_4T__<sp/>||<sp/>__ARM_ARCH_4__<sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="105"><highlight class="normal"></highlight></codeline>
 <codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__mips__<sp/>||<sp/>__mips<sp/>||<sp/>__MIPS__<sp/>||<sp/>__mips<sp/>||<sp/>_MIPS_ISA_MIPS1<sp/>||<sp/>_R3000<sp/>||<sp/>_MIPS_ISA_MIPS2<sp/>||<sp/>__MIPS_ISA2__<sp/>||<sp/>_R4000<sp/>||<sp/>_MIPS_ISA_MIPS3<sp/>||<sp/>__MIPS_ISA3__<sp/>||<sp/>_MIPS_ISA_MIPS4<sp/>||<sp/>__MIPS_ISA4__<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_ARCH</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_ARCH<sp/>MIPS</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__mips__<sp/>||<sp/>__mips<sp/>||<sp/>__MIPS__<sp/>||<sp/>__mips<sp/>||<sp/>_MIPS_ISA_MIPS1<sp/>||<sp/>_R3000<sp/>||<sp/>_MIPS_ISA_MIPS2<sp/>||<sp/>__MIPS_ISA2__<sp/>||<sp/>_R4000<sp/>||<sp/>_MIPS_ISA_MIPS3<sp/>||<sp/>__MIPS_ISA3__<sp/>||<sp/>_MIPS_ISA_MIPS4<sp/>||<sp/>__MIPS_ISA4__<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__mips__<sp/>||<sp/>__mips<sp/>||<sp/>__MIPS__<sp/>||<sp/>__mips<sp/>||<sp/>_MIPS_ISA_MIPS1<sp/>||<sp/>_R3000<sp/>||<sp/>_MIPS_ISA_MIPS2<sp/>||<sp/>__MIPS_ISA2__<sp/>||<sp/>_R4000<sp/>||<sp/>_MIPS_ISA_MIPS3<sp/>||<sp/>__MIPS_ISA3__<sp/>||<sp/>_MIPS_ISA_MIPS4<sp/>||<sp/>__MIPS_ISA4__<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="110"><highlight class="normal"></highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__riscv</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_ARCH</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_ARCH<sp/>RISCV</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__riscv</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__riscv</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="115"><highlight class="normal"></highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>i386<sp/>||<sp/>__i386__<sp/>||<sp/>__i486__<sp/>||<sp/>__i586__<sp/>||<sp/>__i686__<sp/>||<sp/>__i386<sp/>||<sp/>_M_IX86<sp/>||<sp/>_X86_<sp/>||<sp/>__THW_INTEL__<sp/>||<sp/>__I86__<sp/>||<sp/>__INTEL__<sp/>||<sp/>__I86__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="117"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_ARCH</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_ARCH<sp/>X86_32</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>i386<sp/>||<sp/>__i386__<sp/>||<sp/>__i486__<sp/>||<sp/>__i586__<sp/>||<sp/>__i686__<sp/>||<sp/>__i386<sp/>||<sp/>_M_IX86<sp/>||<sp/>_X86_<sp/>||<sp/>__THW_INTEL__<sp/>||<sp/>__I86__<sp/>||<sp/>__INTEL__<sp/>||<sp/>__I86__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>i386<sp/>||<sp/>__i386__<sp/>||<sp/>__i486__<sp/>||<sp/>__i586__<sp/>||<sp/>__i686__<sp/>||<sp/>__i386<sp/>||<sp/>_M_IX86<sp/>||<sp/>_X86_<sp/>||<sp/>__THW_INTEL__<sp/>||<sp/>__I86__<sp/>||<sp/>__INTEL__<sp/>||<sp/>__I86__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="120"><highlight class="normal"></highlight></codeline>
 <codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__x86_64<sp/>||<sp/>__x86_64__<sp/>||<sp/>__amd64__<sp/>||<sp/>__amd64<sp/>||<sp/>_M_X64</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_ARCH</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_ARCH<sp/>X86_64</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__x86_64<sp/>||<sp/>__x86_64__<sp/>||<sp/>__amd64__<sp/>||<sp/>__amd64<sp/>||<sp/>_M_X64</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__x86_64<sp/>||<sp/>__x86_64__<sp/>||<sp/>__amd64__<sp/>||<sp/>__amd64<sp/>||<sp/>_M_X64</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
 <codeline lineno="126"><highlight class="normal"></highlight></codeline>
 <codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
@@ -246,19 +246,19 @@
 <codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_COMP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="133"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_COMP<sp/>CLANG</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="134"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_COMP_CLANG</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__clang__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__clang__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="136"><highlight class="normal"></highlight></codeline>
 <codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>__GNUC__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_COMP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_COMP<sp/>GCC</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_COMP_GCC</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__GNUC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__GNUC__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="142"><highlight class="normal"></highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="144"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_COMP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="145"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_COMP<sp/>MSVC</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="146"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_COMP_MSVC</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>_MSC_VER</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="148"><highlight class="normal"></highlight></codeline>
 <codeline lineno="149"><highlight class="normal"></highlight></codeline>
 <codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
@@ -267,7 +267,7 @@
 <codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>CFF_LANG</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CFF_LANG<sp/>CPP</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__cplusplus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="157"><highlight class="normal"></highlight></codeline>
 <codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>endregion</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="159"><highlight class="normal"></highlight></codeline>
