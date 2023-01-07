@@ -1,5 +1,5 @@
 
-workspace "Caffeine" 
+workspace "Caffeine-Core" 
     configurations { "Debug","Release" } 
    
     project "Caffeine-Core"   

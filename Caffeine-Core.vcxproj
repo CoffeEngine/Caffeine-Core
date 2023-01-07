@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2C3AC45C-98FA-3F93-6135-8910CDB4846F}</ProjectGuid>
+    <ProjectGuid>{6F788D01-ED35-4F0B-BBDD-860C7A311D9B}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Caffeine-Core</RootNamespace>
